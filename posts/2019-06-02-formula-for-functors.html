@@ -1,0 +1,1353 @@
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>The Formula for Functors
+</title><link href="/img/favicon.png" rel="icon"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet"><style type="text/css">
+@-webkit-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-moz-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-ms-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-o-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-webkit-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@-moz-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@-ms-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@-o-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+.fadedOut
+{
+  -webkit-animation-duration  : 1.0s;
+  -moz-animation-duration     : 1.0s;
+  -ms-animation-duration      : 1.0s;
+  -o-animation-duration       : 1.0s;
+  animation-duration          : 1.0s;
+  -webkit-animation-fill-mode : forwards;
+  -moz-animation-fill-mode    : forwards;
+  -ms-animation-fill-mode     : forwards;
+  -o-animation-fill-mode      : forwards;
+  animation-fill-mode         : forwards;
+  -webkit-animation-name      : fadeOut;
+  -moz-animation-name         : fadeOut;
+  -ms-animation-name          : fadeOut;
+  -o-animation-name           : fadeOut;
+  animation-name              : fadeOut;
+}
+
+.fadedIn
+{
+  -webkit-animation-duration  : 1.0s;
+  -moz-animation-duration     : 1.0s;
+  -ms-animation-duration      : 1.0s;
+  -o-animation-duration       : 1.0s;
+  animation-duration          : 1.0s;
+  -webkit-animation-fill-mode : forwards;
+  -moz-animation-fill-mode    : forwards;
+  -ms-animation-fill-mode     : forwards;
+  -o-animation-fill-mode      : forwards;
+  animation-fill-mode         : forwards;
+  -webkit-animation-name      : fadeIn;
+  -moz-animation-name         : fadeIn;
+  -ms-animation-name          : fadeIn;
+  -o-animation-name           : fadeIn;
+  animation-name              : fadeIn;
+}
+
+*
+{
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  -ms-box-sizing     : border-box;
+  -o-box-sizing      : border-box;
+  box-sizing         : border-box;
+}
+
+::after
+{
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  -ms-box-sizing     : border-box;
+  -o-box-sizing      : border-box;
+  box-sizing         : border-box;
+}
+
+::before
+{
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  -ms-box-sizing     : border-box;
+  -o-box-sizing      : border-box;
+  box-sizing         : border-box;
+}
+
+html
+{
+  margin    : none none none none;
+  padding   : none none none none;
+  width     : 100%;
+  height    : 100%;
+  font-size : 100%;
+}
+
+body
+{
+  font-family           : "Fira Sans";
+  color                 : #383838;
+  background-image      : url("/img/wallpaper.png");
+  background-position   : 79.5% 0%;
+  background-size       : cover;
+  background-color      : #a3969c;
+  background-attachment : fixed;
+}
+
+article
+{
+  display : block;
+}
+
+aside
+{
+  display : block;
+}
+
+details
+{
+  display : block;
+}
+
+figcaption
+{
+  display : block;
+}
+
+figure
+{
+  display : block;
+}
+
+footer
+{
+  display : block;
+}
+
+header
+{
+  display : block;
+}
+
+menu
+{
+  display : block;
+}
+
+nav
+{
+  display : block;
+}
+
+section
+{
+  display : block;
+}
+
+summary
+{
+  display : block;
+}
+
+.header
+{
+  height     : 100%;
+  position   : relative;
+  width      : 100%;
+  min-height : 300px;
+  text-align : left;
+  color      : rgba(255,255,255,0.8784);
+}
+
+.flex
+{
+  display        : flex;
+  flex           : 0 1 auto;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  align-items    : center;
+}
+
+.full-width
+{
+  width : 100%;
+}
+
+.container
+{
+  z-index            : 1;
+  display            : block;
+  margin-left        : none;
+  max-width          : 550px;
+  margin-right       : none;
+  padding-left       : 15px;
+  padding-right      : 15px;
+  background-color   : rgba(255,255,255,0.95);
+  color              : rgba(40,40,40,0.5647);
+  border-radius      : 3px 3px 3px 3px;
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.7);
+}
+
+.container-post
+{
+  color     : #383838;
+  max-width : none;
+  font-size : 14px;
+  padding   : 15px 35px 15px 35px;
+}
+
+.row
+{
+  margin-top    : 15px;
+  margin-bottom : 15px;
+  text-align    : center;
+}
+
+.row.stylized
+{
+  margin-top    : none;
+  margin-bottom : none;
+}
+
+.controls
+{
+  display        : flex;
+  flex-direction : row;
+  width          : 100%;
+}
+
+.controls-left
+{
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 50%;
+}
+
+.controls-right
+{
+  width    : 255px;
+  height   : 195.5px;
+  overflow : hidden;
+}
+
+.spotify-player
+{
+  background-color   : rgba(0,0,0,0.8784);
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  border             : solid 3px rgba(255,215,0,0.8784);
+  -webkit-transform  : scale(0.84999,0.84999) translate(-9%,-9%);
+  -moz-transform     : scale(0.84999,0.84999) translate(-9%,-9%);
+  -ms-transform      : scale(0.84999,0.84999) translate(-9%,-9%);
+  -o-transform       : scale(0.84999,0.84999) translate(-9%,-9%);
+  transform          : scale(0.84999,0.84999) translate(-9%,-9%);
+}
+
+.wrapper
+{
+  max-width          : 850px;
+  margin             : 4rem auto 4rem auto;
+  background         : rgba(255,255,255,0.2470);
+  color              : #383838;
+  padding            : 2em 2em 2em 2em;
+  border-radius      : 3px 3px 3px 3px;
+  -webkit-box-shadow : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  -moz-box-shadow    : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  -ms-box-shadow     : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  -o-box-shadow      : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  box-shadow         : 0px 0px 10px 0px rgba(40,40,40,0.3);
+}
+
+.wrapper-container
+{
+  width  : auto;
+  margin : auto auto auto auto;
+}
+
+.entry-meta
+{
+  display        : block;
+  text-transform : uppercase;
+  font-size      : 12px;
+  color          : rgba(255,255,255,255.0);
+  padding-left   : 0px;
+}
+
+.entry-meta a
+{
+  color : rgba(255,255,255,255.0);
+}
+
+.entry-meta li
+{
+  list-style-type : none;
+  display         : inline;
+}
+
+.entry-meta .tag
+{
+  display             : inline-block;
+  border-radius       : 3px 3px 3px 3px;
+  border              : solid 1px rgba(0,0,0,0.0);
+  border-color        : rgba(208,209,213,0.5);
+  text-decoration     : none;
+  background-color    : rgba(255,255,255,0.95);
+  color               : #383838;
+  transition-duration : 0.75s;
+  margin              : 2px 6px 2px 6px;
+  -webkit-box-shadow  : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -moz-box-shadow     : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -ms-box-shadow      : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -o-box-shadow       : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  box-shadow          : 0px 0px 8px 0px rgba(40,40,40,0.25);
+}
+
+.entry-meta .tag span
+{
+  float   : left;
+  padding : 4.5px 7px 4.5px 7px;
+}
+
+.entry-meta .tag:hover
+{
+  background-color : rgba(217,217,217,38.878);
+}
+
+.entry-meta .tag .count
+{
+  -webkit-box-shadow : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -moz-box-shadow    : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -ms-box-shadow     : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -o-box-shadow      : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  box-shadow         : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  background-color   : rgba(38,38,38,13.0);
+  color              : rgba(255,215,0,0.8784);
+  border-radius      : 3px 3px 3px 3px;
+}
+
+.entry-title a
+{
+  text-decoration : none;
+}
+
+.entry-tags
+{
+  display    : block;
+  margin     : -webkit-1rem auto calc(1.5rem - 32px) auto;
+  margin     : -moz-1rem auto calc(1.5rem - 32px) auto;
+  margin     : -ms-1rem auto calc(1.5rem - 32px) auto;
+  margin     : -o-1rem auto calc(1.5rem - 32px) auto;
+  margin     : 1rem auto calc(1.5rem - 32px) auto;
+  text-align : left;
+}
+
+.social-share
+{
+  display    : block;
+  margin-top : 1rem;
+  width      : 30%;
+  float      : right;
+  text-align : right;
+}
+
+.feature
+{
+  transition-duration : 0.5s;
+  color               : rgba(255,255,255,0.8784);
+  padding             : 10em 10em 10em 10em;
+  margin-left         : -4rem;
+  margin-right        : -4rem;
+  margin-top          : -2rem;
+  border-radius       : 3px 3px none none;
+  background-color    : rgba(0,0,0,0.6);
+  background-position : center center;
+}
+
+#disqus_thread
+{
+  width               : 75%;
+  max-width           : 850px;
+  margin              : -3rem auto 4rem auto;
+  background          : #ffffff;
+  color               : #383838;
+  padding             : 2em 2em 2em 2em;
+  border-radius       : 3px 3px 3px 3px;
+  -webkit-box-shadow  : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  -moz-box-shadow     : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  -ms-box-shadow      : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  -o-box-shadow       : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  box-shadow          : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  transition-duration : 0.5s;
+}
+
+.btn
+{
+  -webkit-transition : all 0.15s ease-in 0.0s;
+  -moz-transition    : all 0.15s ease-in 0.0s;
+  -ms-transition     : all 0.15s ease-in 0.0s;
+  -o-transition      : all 0.15s ease-in 0.0s;
+  transition         : all 0.15s ease-in 0.0s;
+  padding            : 10px 18px 10px 18px;
+  margin             : 4px auto 4px auto;
+  display            : inline-block;
+  border             : solid 1px auto;
+  border-color       : #282828;
+  border-radius      : 3px 3px 3px 3px;
+  text-decoration    : none;
+  background         : rgba(255,255,255,0.88);
+  -webkit-box-shadow : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  -moz-box-shadow    : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  -ms-box-shadow     : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  -o-box-shadow      : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  box-shadow         : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  color              : #282828;
+  background-color   : rgba(255,255,255,0.8784);
+  border-color       : #dd8338;
+  font-size          : 14px;
+}
+
+.btn:hover
+{
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  color              : #ff4136;
+}
+
+.btn-return
+{
+  border-radius      : 2px 2px 2px 2px;
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  background-color   : rgba(255,255,255,0.95);
+  padding            : 16px 15px 16px 15px;
+}
+
+.btn-return:hover
+{
+  -webkit-box-shadow : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  -moz-box-shadow    : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  -ms-box-shadow     : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  -o-box-shadow      : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  box-shadow         : 0px 0px 13px 0px rgba(40,40,40,0.85);
+}
+
+.btn-social
+{
+  color     : #282828;
+  font-size : 23px;
+  padding   : 4px 4px 4px 4px;
+  margin    : 0px 8px 0px 8px;
+}
+
+
+.stylized .btn
+{
+  margin      : 10px 10px 10px 10px;
+  font-size   : 16px;
+  font-weight : 300;
+}
+
+hr
+{
+  border           : none 0px rgba(0,0,0,0.0);
+  height           : 3px;
+  opacity          : 0.29999;
+  margin           : 15px auto 15px auto;
+  background-image : -webkit-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : -moz-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : -ms-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : -o-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+}
+
+hr .light
+{
+  opacity : 0.2;
+}
+
+img
+{
+  display         : block;
+  max-width       : 100%;
+  width           : auto;
+  height          : auto;
+  vertical-align  : top;
+  background-size : cover;
+  margin-left     : auto;
+  margin-right    : auto;
+  border          : solid 0px rgba(255,255,255,0.8784);
+}
+
+.img-circle
+{
+  border-radius      : 50% 50% 50% 50%;
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  margin-top         : 20px;
+  border             : solid 3px rgba(255,215,0,0.78);
+  height             : 200px;
+  width              : 200px;
+}
+
+.author-photo
+{
+  margin-top       : 12px;
+  width            : 128px;
+  height           : 128px;
+  border-radius    : 50% 50% 50% 50%;
+  border           : solid 2px rgba(255,215,0,0.8784);
+  background-color : rgba(0,0,0,0.8784);
+}
+
+.image-right
+{
+  float  : right;
+  margin : none auto auto 1em;
+}
+
+figure
+{
+  margin  : none none none none;
+  padding : 10px auto 10px auto;
+}
+
+figure img
+{
+  margin-bottom : 10px;
+  border-radius : 4px 4px 4px 4px;
+}
+
+
+figure.half img
+{
+  width  : -webkit-calc(50% - 4px);
+  width  : -moz-calc(50% - 4px);
+  width  : -ms-calc(50% - 4px);
+  width  : -o-calc(50% - 4px);
+  width  : calc(50% - 4px);
+  float  : left;
+  margin : auto 1px auto 1px;
+}
+
+figure.half figcaption
+{
+  clear : left;
+}
+
+
+figure .third img
+{
+  width  : -webkit-calc(33.29999% - 6px);
+  width  : -moz-calc(33.29999% - 6px);
+  width  : -ms-calc(33.29999% - 6px);
+  width  : -o-calc(33.29999% - 6px);
+  width  : calc(33.29999% - 6px);
+  float  : left;
+  margin : auto 1px auto 1px;
+}
+
+.group-container
+{
+  border-radius : 3px 3px 3px 3px;
+  border-color  : #282828;
+  border        : solid 1px auto;
+}
+
+.group-arrow
+{
+  border-color : #383838;
+}
+
+.reading-time
+{
+  text-align    : center;
+  font-weight   : 300;
+  margin-bottom : 10px;
+}
+
+
+pre .highlight
+{
+  padding : 1em 1em 1em 1em;
+}
+
+.highlight
+{
+  background-color : #49483e;
+  color            : #f8f8f2;
+  font-family      : "Inconsolata";
+  border-radius    : 4px 4px 4px 4px;
+}
+
+.highlight pre
+{
+  position : relative;
+  margin   : none none none none;
+  padding  : 1em 1em 1em 1em;
+}
+
+.highlight .lineno
+{
+  padding-right : 24px;
+  color         : rgba(255,255,255,255.0);
+}
+
+.highlight .hll
+{
+  background-color : #49483e;
+}
+
+.highlight .c
+{
+  color : #75715e;
+}
+
+.highlight .err
+{
+  color : #950050;
+}
+
+.highlight .ge
+{
+  font-style : italic;
+}
+
+.highlight .gs
+{
+  font-weight : bold;
+}
+
+.highlight .o
+{
+  color : #f92672;
+}
+
+.highlight .kn
+{
+  color : #f92672;
+}
+
+.highlight .nt
+{
+  color : #f92672;
+}
+
+.highlight .ow
+{
+  color : #f92672;
+}
+
+.highlight .k
+{
+  color : #66d9ef;
+}
+
+.highlight .kc
+{
+  color : #66d9ef;
+}
+
+.highlight .kd
+{
+  color : #66d9ef;
+}
+
+.highlight .kp
+{
+  color : #66d9ef;
+}
+
+.highlight .kr
+{
+  color : #66d9ef;
+}
+
+.highlight .kt
+{
+  color : #66d9ef;
+}
+
+.highlight .no
+{
+  color : #66d9ef;
+}
+
+.highlight .n
+{
+  color : #f8f8f2;
+}
+
+.highlight .p
+{
+  color : #f8f8f2;
+}
+
+.highlight .nb
+{
+  color : #f8f8f2;
+}
+
+.highlight .ni
+{
+  color : #f8f8f2;
+}
+
+.highlight .nl
+{
+  color : #f8f8f2;
+}
+
+.highlight .nn
+{
+  color : #f8f8f2;
+}
+
+.highlight .py
+{
+  color : #f8f8f2;
+}
+
+.highlight .nv
+{
+  color : #f8f8f2;
+}
+
+.highlight .w
+{
+  color : #f8f8f2;
+}
+
+.highlight .bp
+{
+  color : #f8f8f2;
+}
+
+.highlight .vc
+{
+  color : #f8f8f2;
+}
+
+.highlight .vg
+{
+  color : #f8f8f2;
+}
+
+.highlight .vi
+{
+  color : #f8f8f2;
+}
+
+.highlight .ld
+{
+  color : #e6db74;
+}
+
+.highlight .s
+{
+  color : #e6db74;
+}
+
+.highlight .sb
+{
+  color : #e6db74;
+}
+
+.highlight .sc
+{
+  color : #e6db74;
+}
+
+.highlight .sd
+{
+  color : #e6db74;
+}
+
+.highlight .s2
+{
+  color : #e6db74;
+}
+
+.highlight .sh
+{
+  color : #e6db74;
+}
+
+.highlight .si
+{
+  color : #e6db74;
+}
+
+.highlight .sx
+{
+  color : #e6db74;
+}
+
+.highlight .sr
+{
+  color : #e6db74;
+}
+
+.highlight .s1
+{
+  color : #e6db74;
+}
+
+.highlight .ss
+{
+  color : #e6db74;
+}
+
+.highlight .na
+{
+  color : #a6e22e;
+}
+
+.highlight .nc
+{
+  color : #a6e22e;
+}
+
+.highlight .nd
+{
+  color : #a6e22e;
+}
+
+.highlight .ne
+{
+  color : #a6e22e;
+}
+
+.highlight .nf
+{
+  color : #a6e22e;
+}
+
+.highlight .nx
+{
+  color : #a6e22e;
+}
+
+.highlight .l
+{
+  color : #ae81ff;
+}
+
+.highlight .m
+{
+  color : #ae81ff;
+}
+
+.highlight .mf
+{
+  color : #ae81ff;
+}
+
+.highlight .mh
+{
+  color : #ae81ff;
+}
+
+.highlight .mi
+{
+  color : #ae81ff;
+}
+
+.highlight .mo
+{
+  color : #ae81ff;
+}
+
+.highlight .se
+{
+  color : #ae81ff;
+}
+
+.highlight .il
+{
+  color : #ae81ff;
+}
+
+title
+{
+  text-align  : center;
+  font-weight : bold;
+}
+
+blockquote
+{
+  font-family  : "serif";
+  font-style   : italic;
+  border-left  : solid 6px #444444;
+  padding-left : 20px;
+  margin       : 0px 0px 0px 0px;
+}
+
+a
+{
+  transition-duration : 0.4s;
+  color               : #444444;
+}
+
+a:link
+{
+  color : #444444;
+}
+
+a:visited
+{
+  color : #444444;
+}
+
+a:hover
+{
+  color : #ff4136;
+}
+
+a:active
+{
+  transition-duration : 0.3s;
+  color               : #ff4136;
+}
+
+figcaption
+{
+  padding-top : 10px;
+  font-size   : 14px;
+  color       : #8b8b8b;
+}
+
+pre,
+code
+{
+  font-family : "Inconsolata";
+  overflow-x  : auto;
+}
+
+table
+{
+  width : 100%;
+}
+
+p pre,
+p code,
+li pre,
+li code
+{
+  font-size        : 14px;
+  background-color : #e8e8e8;
+  border           : solid 1px #d0d1d5;
+  border-radius    : 4px 4px 4px 4px;
+  margin           : 0px 2px 0px 2px;
+  padding          : 0px 5px 0px 5px;
+}
+
+li .highlight pre,
+li .highlight code
+{
+  background-color : rgba(0,0,0,0.0);
+  border           : solid 0px rgba(0,0,0,0.0);
+}
+
+.notice
+{
+  margin-top       : 1.5em;
+  padding          : 0.5em 1em 0.5em 1em;
+  text-indent      : 0px;
+  font-size        : 14px;
+  background-color : #282828;
+  border           : solid 1px #d0d1d5;
+  border-radius    : 3px 3px 3px 3px;
+}
+
+dt
+{
+  font-weight : bolder;
+}
+
+.stylized
+{
+  font-size   : 1rem;
+  font-weight : 300;
+}
+
+.site-title
+{
+  margin-top    : 22px;
+  margin-bottom : 12px;
+  font-size     : 1.32rem;
+  font-weight   : 300;
+}
+
+.content
+{
+  font-size     : 14px;
+  line-height   : 1.85;
+  margin-bottom : 0.925rem;
+  text-align    : justify;
+}
+
+.btn-return-wrapper
+{
+  text-align    : center;
+  font-weight   : bold;
+  margin-bottom : 3rem;
+  margin-top    : -webkit-calc(4rem - 48px);
+  margin-top    : -moz-calc(4rem - 48px);
+  margin-top    : -ms-calc(4rem - 48px);
+  margin-top    : -o-calc(4rem - 48px);
+  margin-top    : calc(4rem - 48px);
+}
+
+.post-header
+{
+  text-align    : center;
+  font-weight   : bold;
+  margin-bottom : 2rem;
+}
+
+.half-line
+{
+  line-height : 0.29999;
+}
+
+h3.stylized a
+{
+  color           : #282828;
+  text-decoration : none;
+}
+
+.gold-star-wrapper
+{
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  margin-bottom   : 20px;
+  margin-left     : 8px;
+  margin-right    : 50px;
+}
+
+.gold-star
+{
+  color     : rgba(255,215,0,0.8784);
+  font-size : 1.75rem;
+}
+
+.li-header
+{
+  display         : flex;
+  justify-content : space-between;
+}
+
+.li-title
+{
+  float   : left;
+  padding : 0px 0px 0px 0px;
+}
+
+.li-date-wrapper
+{
+  display     : flex;
+  align-items : center;
+}
+
+.li-date
+{
+  float      : right;
+  text-align : right;
+  margin     : 0px auto 0px auto;
+}
+
+.li-flexbox
+{
+  display        : flex;
+  flex-direction : row;
+}
+
+.post-list
+{
+  text-align : left;
+}
+
+.post-list ul
+{
+  list-style         : none inside none;
+  padding-left       : 0px;
+  background-color   : rgba(0,0,0,0.0);
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+}
+
+.post-list li
+{
+  background-color : rgba(0,0,0,0.0);
+  padding          : 11px 16px 11px 16px;
+  border-radius    : 3px 3px 3px 3px;
+  text-decoration  : none;
+  background       : -webkit-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : -moz-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : -ms-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : -o-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  color            : #282828;
+}
+
+.post-list li a
+{
+  transition-duration : 0.2s;
+  font-size           : 20px;
+  text-decoration     : none;
+  color               : #282828;
+  font-weight         : bolder;
+}
+
+.post-list li a:hover
+{
+  color : #ff4136;
+}
+
+.post-list li p
+{
+  font-weight : 300;
+  font-size   : 16px;
+  margin-top  : 4px;
+}
+
+.post-list li .btn
+{
+  font-size   : 14px;
+  font-weight : bolder;
+}
+
+
+/* Generated with Clay, http://fvisser.nl/clay */</style></head><body><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/posts.html" class="btn btn-return"><i class="fas fa-fw fa-chevron-left"></i></a></div><div class="container container-post"><div class="post-header"><h1>The Formula for Functors
+</h1><h4>02 June 2019
+</h4><p class="reading-time"><i class="far fa-clock"></i> Reading time ~24 minutes</p></div><hr><br class="half-line"><p>Bifunctor. Protofunctor - no, wait - or was it <em>Profunctor</em>? Contra-? Co-? …Variant? It can seem as though the Haskell community resides atop an ivory tower and drops some of the most <em>confusing</em> names for concepts and abstractions, down to the crowd of laymen at the bottom as some sort of indirect gesture of flexing their intelligence. I can assure you, however, that this is not the case, but a mere perception. My recent Google search shows that there <em>still</em> aren’t too many guides out there for laymen regarding anything more advanced than a regular <code>Functor</code>, so I’ve taken it into my own hands to contribute a missing piece to the Haskell community.</p>
+<p>In this article, we will cover the common types of functors encountered in the wild, and how their names are constructed. By the end of this article, I hope that you will have gained a better understanding of the differences between the different types of functors, and be able to make sense of their names.</p>
+<p>First thing’s first: this guide assumes that you have a <em>basic</em> understanding of regular <code>Functor</code>s; however, due the analogy that I am going to use for the rest of this post, I will briefly touch up on regular <code>Functor</code>s to make sure we’re on the same page.</p>
+<h1 id="functor">Functor</h1>
+<p>A <code>Functor</code> simply defines <code>fmap :: (a -&gt; b) -&gt; f a -&gt; f b</code>. The commonly used analogy for <code>Functor</code>s is a “boxed” or “wrapped” value. While this analogy is valid, I find that it confuses people once they move on to more advanced functors; that is to say, this analogy completely breaks down when talking about <code>Contravariant</code>, which we will cover later on.</p>
+<p>Let me re-introduce the <code>Functor</code> using a new analogy: a machine, with both an input and and output end, however only the output end is chainable to other <em>function machines</em>, while the input side can <em>only insert</em> inputs into the machine chain. You may be familiar with this analogy with regards to regular functions, however due to the restriction I placed on the insertion end, it is a bit less flexible than a regular function.</p>
+<p>To quickly recap: 1. A <code>function</code> is a machine that can take an input and produce an output, and is freely chainable on both ends. We will refer to functions as <em>function machines</em> in the context of our analogy. 2. A <code>Functor</code> is a machine that can take an input and produce an output, but only the output end is chainable to <em>function machines</em>, while the input end can only insert input values into it. We will explicitly refer to <code>Functors</code> as <em>functor machines</em> in our analogy.</p>
+<p><code>fmap</code>, then, defines a new <em>functor machine</em> by attaching a <em>function machine</em> to the output side of our original <em>functor machine</em>, creating a <em>new functor machine</em> comprised of our two original machines chained together. That’s right. We don’t think of the machines individually once we chain them; we think of the machine as <em>one unit</em>.</p>
+<p>Simple enough, right?</p>
+<h2 id="an-aside-the-mythical-cofunctor">An Aside: The Mythical Cofunctor</h2>
+<p>Cofunctors seem to confuse newcomers to Haskell to no end.</p>
+<p>It’s just a joke in the community.</p>
+<p>There’s your politically incorrect answer.</p>
+<p>But briefly, <code>co-</code>anything refers to the dual or “inverse” of that thing. Generally this means flipping the function arrows.</p>
+<p>Given <code>fmap :: (a -&gt; b) -&gt; (f a -&gt; f b)</code> (with explicit parentheses to emphasize currying), the dual of that would be <code>cofmap :: (a &lt;- b) -&gt; (f a &lt;- f b)</code>, or, after flipping the arrows back around to fit regular Haskell notation, <code>cofmap :: (b -&gt; a) -&gt; f b -&gt; f a</code>. It’s not rocket science. It’s exactly the same thing minus different type variable names.</p>
+<p>TL;DR: <code>Cofunctor</code>s are just <code>Functor</code>s.</p>
+<p>There exists an <code>acme-cofunctor</code> library on Hackage which further exacerbates the confusion. It’s a <em>satirical library</em>; I mean for god’s sake, it’s prefixed with <code>acme</code> for crying out loud. There are other satirical libraries out there, so watch out.</p>
+<h1 id="n-functors">n-Functors</h1>
+<p>The next logical step in the functor complexity hierarchy are n-Functors. What’s an n-Functor? You already know one! <code>Functor</code> is just a 1-Functor; but on a more serious note, you may have heard of <code>Bifunctor</code>. This is another example of an n-Functor. Besides <code>Bifunctor</code>s, there exists an infinite number of possible n-Functors. “Bi” simply means “two”, as you all know. Trifunctors, Quadfunctors, Pentafunctors, etc., all theoretically exist; it’s just that we don’t encounter them in day-to-day programming, just like how the most common sort of tuple we use is the pair <code>(_, _)</code>, not the 3-tuple, 4-tuple, or whatever. Besides, once we can define pairs of something, we can infinitely nest pairs inside one another in order to define arbitrarily “long” (and deep) tuples.</p>
+<p>To prove my point, <a href="http://hackage.haskell.org/package/origami-0.0.6/docs/Data-Origami-Internal-Trifunctor.html" target="_blank">here’s a definition of a Trifunctor encountered in the wild</a>. The function signature for <code>trimap</code> is trivial once you understand <code>Bifunctor</code> and <code>bimap</code>.</p>
+<h2 id="bifunctors">Bifunctors</h2>
+<p>So let’s focus on <code>Bifunctor</code>s, as they are the most common type of n-Functor you will encounter. Once you understand <code>Bifunctor</code>s, every other n-Functor will make sense to you.</p>
+<p>A <code>Bifunctor</code> in our analogy can be thought of as a modified <em>functor machine</em>, except that it has two <em>parallel pairs</em> of input and output sides, which we refer to as the “left” side and the “right” side. The rule which governs <em>functor machines</em> still apply to each side: only the output ends are chainable with regular <em>function machines</em> and the input ends can only accept raw input. We will call this new machine the <em>bifunctor machine</em>.</p>
+<p>The definition of <code>Bifunctor</code> consists of:</p>
+<ol type="1">
+<li><code>first</code>, which chains a <em>function machine</em> to the <em>left</em> output of the <em>bifunctor machine</em>.</li>
+<li><code>second</code>, which chains a <em>function machine</em> to the <em>right</em> output of the <em>bifunctor machine</em>.</li>
+<li><code>bimap</code>, which takes two functions and chains the first one to the <em>left</em> output of the <em>bifunctor machine</em>, and chains the right one to the <em>right</em> output of the <em>bifunctor machine</em>.</li>
+</ol>
+<p>That’s it. Someone just took two <em>functor machines</em> and wrapped them in a new casing to make it seem like one machine with 2 input ends and 2 output ends. Each side can be thought of as a regular functor. Hell, regular <code>Functor</code>s that accept pairs and output pairs are functionally the same as a <code>Bifunctor</code>, but a <code>Bifunctor</code> abstraction allows for slightly less messy syntax than a <code>Functor</code> on pairs. Take for instance, chaining a <em>function machine</em> to a <em>functor machine operating on pairs</em>. Mapping one side would look somewhat ridiculous, like <code>fmap (\(leftOutput, rightOutput) -&gt; (calculateSomething leftOutput, rightOutput))</code>, which can be reduced to just <code>fmap (calculateSomething *** id)</code> by utilizing the <code>Arrow</code> instance of regular functions <code>(-&gt;)</code>.</p>
+<p>As you can imagine, Trifunctors, Quadfunctors, Pentafunctors, would just be 3, 4, 5 regular <code>Functor</code>s “wrapped” in a new casing, and so on. Again, not rocket science. A Trifunctor, for instance, might define <code>1map</code> <code>2map</code> <code>3map</code> and <code>trimap</code>.</p>
+<h1 id="contravariant-functors">Contravariant Functors</h1>
+<p>Going back to 1-Functors (<code>Functor</code>), there is a sort of “counterpart” to it named <code>Contravariant</code>, which is just short for “contravariant functor”. This functor is probably the most confusing one out of them all for beginners, since the type signature can make one’s head implode <em>if they are used to the analogy of a “box” or “wrapped value”</em>.</p>
+<p>Let’s forget about the “box” or “wrapper” analogy for a second and redefine a <code>Contravariant</code> using our analogy of machines. A <code>Contravariant</code> functor is one with an <em>input side that can be chained to regular function machines</em>, while the output side <em>can only output a predefined result</em>. This is sort of a reversal of the rule that governs <code>Functor</code>.</p>
+<p>The <code>Contravariant</code> counterpart to <code>fmap</code> is <code>contramap</code>. While <code>fmap</code> maps the <em>output</em> of a functor to something different, <code>contramap</code> maps the input of the functor to something else.</p>
+<p>You’re probably still confused at this point. Let’s take a look at the signature for <code>contramap</code>:</p>
+<p><code>contramap :: (b -&gt; a) -&gt; f a -&gt; f b</code></p>
+<p>I sympathize with you if this type signature makes no sense. Several questions may be running through your head as you examine this type signature, including:</p>
+<ol type="1">
+<li>How can we get a wrapped ‘b’ (<code>f b</code>) if we <em>need</em> a <code>b</code> in the first place to get an <code>a</code>?</li>
+<li>If we get an <code>a</code> via our function, then why do we need to pass in a <em>wrapped a</em> (<code>f a</code>)?</li>
+<li>How does <code>f a</code> even get used when our function requires a <code>b</code> which can only be obtained via the output of the function?</li>
+</ol>
+<p>This is why the analogy of a boxed or wrapped value fails miserably. Forgot about that analogy. Think in terms of machines. The type parameter of regular <code>Functors</code> (i.e. the <code>a</code> in <code>f a</code>) represents the <em>output type</em> of the functor. For <code>Contravariant</code> functors, the type parameter represents the <em>input type</em> of the functor.</p>
+<p>In the signature for <code>contramap</code>, the functor <code>f a</code> represents our <em>original contravariant functor</em>, constructed via some means (that may not necessarily be via contramapping other <code>Contravariants</code>). <code>(b -&gt; a)</code> is a function that <em>transforms b into the input of our original contravariant functor</em>. Given these, <code>contramap</code> <strong><em>produces a new contravariant functor that accepts an input <code>b</code> and internally transforms that <code>b</code> into an <code>a</code> and calls the original functor <code>f a</code> using that <code>a</code></em></strong>. Make sense now? If not, here’s an illustration that may help.</p>
+<figure>
+<img src="https://i.imgur.com/uk5wOWU.png" alt="Contravariant Contramapping Illustration" /><figcaption aria-hidden="true">Contravariant Contramapping Illustration</figcaption>
+</figure>
+<h1 id="profunctors">Profunctors</h1>
+<p>And so we’ve arrived at the infamous <code>Profunctor</code>. The primary obstacle in understanding a <code>Profunctor</code> is understanding <code>Contravariant</code>, and if my explanation of <code>Contravariant</code> has clicked in your head, this should be easy.</p>
+<p>A <code>Profunctor</code> is a machine with <em>both the input and output ends chainable with regular function machines</em>. It is a functor with no restrictions on either end, and can be both <code>fmapped</code> and <code>contramapped</code>.</p>
+<p><code>Profunctor</code> takes <em>two</em> type arguments instead of the usual single argument found in <code>Functor</code> and <code>Contravariant</code>. The <em>left</em> type argument represents the <em>input</em> while the <em>right</em> type argument represents the <em>output</em>. That said, the definition of <code>Profunctor</code> consists of:</p>
+<ol type="1">
+<li><code>lmap</code>, which maps over the left type argument (input) of the functor, making it the equivalent of <code>contramap</code>.</li>
+<li><code>rmap</code>, which maps over the right type argument (output) of the functor, making it the equivalent of <code>fmap</code>.</li>
+<li><code>dimap</code>, which takes 2 functions, the first (left) one is applied to <code>lmap</code>, while the second (right) one is applied to <code>rmap</code>.</li>
+</ol>
+<h2 id="flipping-things-around-orpvariant-functors">Flipping Things Around: Orpvariant Functors</h2>
+<p>Some of you may encounter the <a href="http://hackage.haskell.org/package/morphisms-functors-0.1.7/docs/Control-Functor-Polyvariant-Orpvariant.html" target="_blank">“orpvariant functor”</a> on Hackage. Nobody actually uses this functor, practically speaking. “Orp” is simply the reverse of “Pro”, and is not a formal Greek prefix like the ones found in the names of other functors. True to its name, it is simply a <code>Profunctor</code> with the type arguments switched around. <code>Orpvariant a b</code> is the same as <code>Profunctor b a</code>.</p>
+<p>The library that defines <code>Orpvariant</code> only has one instance definition for Orpvariant: the reverse function arrow (<code>&lt;--</code>), called <code>Opposite</code>. Naturally if a type represents a reverse function, where the first type argument represents the output and the second type argument represents the input, then instances of multiparameter typeclasses such as <code>Profunctor</code> need to have their type arguments reversed. As such, <code>Orpvariant</code> was invented for purposes specific to the library, but can be useful if you also need to define a <code>Profunctor</code> instance for something that has its “input” and “output” type arguments flipped, similar to <code>Opposite</code>.</p>
+<p><code>Orpvariant</code> defines <code>orpmap</code> which is simply <code>dimap</code> with its function arguments flipped.</p>
+<h1 id="the-formula-for-functors">The Formula for Functors</h1>
+<p>In this article, we have examined several common types of functors in order of complexity. I hereby present the formula for functor name construction:</p>
+<p><code>n-P-functor</code></p>
+<p>…Where <code>n</code> represents the the number of input/output pairs, <em>which can be omitted if n = 1</em>, and P represents the <em>type of functor</em> (a type of functor must have some sort of rule that governs each pair in the context of our analogy), <em>which can be omitted if P is covariant</em>.</p>
+<ul>
+<li>For <code>Functor</code>, n = 1 (Mono), and P is covariant.</li>
+<li>For <code>Bifunctor</code>, n = 2 (Bi), and P is covariant.</li>
+<li>For <code>Contravariant</code>, n = 1 (Mono), and P is contravariant.</li>
+<li>For <code>Profunctor</code>, n = 1 (Mono), and P is provariant (yes, that’s what pro- stands for).</li>
+</ul>
+<p>It follows that Biprofunctors, <a href="http://hackage.haskell.org/package/morphisms-functors-0.1.7/docs/Control-Functor-Polyvariant-Tricontravariant.html" target="_blank">Tricontravariants</a>, <a href="http://hackage.haskell.org/package/morphisms-functors-0.1.7/docs/Control-Functor-Polyvariant-Bicontravariant.html" target="_blank">Bicontravariants</a>, Pentafunctors, etc., all exist; though in reality, we have no need for such complexity most of the time.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I hope that this article has revealed the rhyme and reason behind functors commonly encountered in the wild. I did not cover <code>Strong</code> nor <code>Costrong</code> as I believe they are out of scope (in the sense that they are types of <em>profunctors</em> instead of types of <em>functors</em> directly, if that makes sense). In the future I will cover <em>generalized functors</em> such as <code>Star</code>, <code>Costar</code>, <code>Yoneda</code>, and <code>Coyoneda</code>, as well as abstractions built on top of <code>Profunctor</code>, such as <code>Strong</code> and <code>Costrong</code>, as well as their generalizations <code>Tambara</code> and <code>Pastro</code>.</p>
+<p>If you have any comments or are still confused, leave a comment down below! If you believe that this is still confusing and that images would greatly aid in your understanding, leave a request down below and I’ll consider adding some illustrations to this article.</p></div></div><div class="entry-meta"><br class="half-line"><hr class="light"><span class="entry-tags"><a href="/tag/haskell
+.html" class="tag"><span>haskell
+</span></a><a href="/tag/functors
+.html" class="tag"><span>functors
+</span></a></span></div></div><section id="disqus_thread"></section></body><script src="js/jquery-1.12.0.min.js"></script><script src="js/scripts.js"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>
