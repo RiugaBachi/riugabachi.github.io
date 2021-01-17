@@ -220,7 +220,7 @@ body
   background-image      : url("/img/wallpaper.png");
   background-position   : 79.5% 0%;
   background-size       : cover;
-  background-color      : #a3969c;
+  background-color      : #d24d57;
   background-attachment : fixed;
 }
 
@@ -277,6 +277,11 @@ section
 summary
 {
   display : block;
+}
+
+.hidden
+{
+  display : none;
 }
 
 .header
@@ -631,7 +636,7 @@ img
   -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
   box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
   margin-top         : 20px;
-  border             : solid 3px rgba(255,215,0,0.78);
+  border             : solid 3px rgba(255,215,0,0.85);
   height             : 200px;
   width              : 200px;
 }
@@ -718,300 +723,83 @@ pre .highlight
   padding : 1em 1em 1em 1em;
 }
 
-.highlight
+div > .sourceCode
 {
-  background-color : #49483e;
-  color            : #f8f8f2;
-  font-family      : "Inconsolata";
+  -webkit-box-shadow : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -moz-box-shadow    : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -ms-box-shadow     : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -o-box-shadow      : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  box-shadow         : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+}
+
+.sourceCode
+{
+  background-color : #121212;
+  color            : #e8e8e8;
+  font-family      : "JetBrainsMonoMedium Nerd Font Mono";
+  font-size        : 12px;
   border-radius    : 4px 4px 4px 4px;
 }
 
-.highlight pre
+.sourceCode pre
 {
-  position : relative;
-  margin   : none none none none;
-  padding  : 1em 1em 1em 1em;
+  overflow-x : hidden;
+  position   : relative;
+  margin     : none none none none;
+  padding    : 1em 1em 1em 1em;
 }
 
-.highlight .lineno
-{
-  padding-right : 24px;
-  color         : rgba(255,255,255,255.0);
-}
-
-.highlight .hll
+.sourceCode .hll
 {
   background-color : #49483e;
 }
 
-.highlight .c
+.sourceCode .co
 {
   color : #75715e;
 }
 
-.highlight .err
+.sourceCode .err
 {
   color : #950050;
 }
 
-.highlight .ge
+.sourceCode .ge
 {
   font-style : italic;
 }
 
-.highlight .gs
+.sourceCode .gs
 {
   font-weight : bold;
 }
 
-.highlight .o
+.sourceCode .ot
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .kn
+.sourceCode .kw
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .nt
+.sourceCode .op
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .ow
-{
-  color : #f92672;
-}
-
-.highlight .k
-{
-  color : #66d9ef;
-}
-
-.highlight .kc
-{
-  color : #66d9ef;
-}
-
-.highlight .kd
-{
-  color : #66d9ef;
-}
-
-.highlight .kp
-{
-  color : #66d9ef;
-}
-
-.highlight .kr
-{
-  color : #66d9ef;
-}
-
-.highlight .kt
-{
-  color : #66d9ef;
-}
-
-.highlight .no
-{
-  color : #66d9ef;
-}
-
-.highlight .n
-{
-  color : #f8f8f2;
-}
-
-.highlight .p
-{
-  color : #f8f8f2;
-}
-
-.highlight .nb
-{
-  color : #f8f8f2;
-}
-
-.highlight .ni
-{
-  color : #f8f8f2;
-}
-
-.highlight .nl
-{
-  color : #f8f8f2;
-}
-
-.highlight .nn
-{
-  color : #f8f8f2;
-}
-
-.highlight .py
-{
-  color : #f8f8f2;
-}
-
-.highlight .nv
-{
-  color : #f8f8f2;
-}
-
-.highlight .w
-{
-  color : #f8f8f2;
-}
-
-.highlight .bp
-{
-  color : #f8f8f2;
-}
-
-.highlight .vc
-{
-  color : #f8f8f2;
-}
-
-.highlight .vg
-{
-  color : #f8f8f2;
-}
-
-.highlight .vi
-{
-  color : #f8f8f2;
-}
-
-.highlight .ld
+.sourceCode .dt
 {
   color : #e6db74;
 }
 
-.highlight .s
-{
-  color : #e6db74;
-}
-
-.highlight .sb
-{
-  color : #e6db74;
-}
-
-.highlight .sc
-{
-  color : #e6db74;
-}
-
-.highlight .sd
-{
-  color : #e6db74;
-}
-
-.highlight .s2
-{
-  color : #e6db74;
-}
-
-.highlight .sh
-{
-  color : #e6db74;
-}
-
-.highlight .si
-{
-  color : #e6db74;
-}
-
-.highlight .sx
-{
-  color : #e6db74;
-}
-
-.highlight .sr
-{
-  color : #e6db74;
-}
-
-.highlight .s1
-{
-  color : #e6db74;
-}
-
-.highlight .ss
-{
-  color : #e6db74;
-}
-
-.highlight .na
+.sourceCode .st
 {
   color : #a6e22e;
-}
-
-.highlight .nc
-{
-  color : #a6e22e;
-}
-
-.highlight .nd
-{
-  color : #a6e22e;
-}
-
-.highlight .ne
-{
-  color : #a6e22e;
-}
-
-.highlight .nf
-{
-  color : #a6e22e;
-}
-
-.highlight .nx
-{
-  color : #a6e22e;
-}
-
-.highlight .l
-{
-  color : #ae81ff;
-}
-
-.highlight .m
-{
-  color : #ae81ff;
-}
-
-.highlight .mf
-{
-  color : #ae81ff;
-}
-
-.highlight .mh
-{
-  color : #ae81ff;
-}
-
-.highlight .mi
-{
-  color : #ae81ff;
-}
-
-.highlight .mo
-{
-  color : #ae81ff;
-}
-
-.highlight .se
-{
-  color : #ae81ff;
-}
-
-.highlight .il
-{
-  color : #ae81ff;
 }
 
 title
@@ -1066,7 +854,7 @@ figcaption
 pre,
 code
 {
-  font-family : "Inconsolata";
+  font-family : "JetBrainsMonoMedium Nerd Font Mono";
   overflow-x  : auto;
 }
 
@@ -1093,6 +881,12 @@ li .highlight code
 {
   background-color : rgba(0,0,0,0.0);
   border           : solid 0px rgba(0,0,0,0.0);
+}
+
+.math
+{
+  font-size   : 18px;
+  font-family : "serif";
 }
 
 .notice
@@ -1269,11 +1063,11 @@ h3.stylized a
 }
 
 
-/* Generated with Clay, http://fvisser.nl/clay */</style></head><body><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/posts.html" class="btn btn-return"><i class="fas fa-fw fa-chevron-left"></i></a></div><div class="container container-post"><div class="post-header"><h1>Posts tagged &quot;haskell&quot;</h1></div><hr><br class="half-line"><br class="half-line"><div class="post-list"><ul><li><div class="li-flexbox"><div class="gold-star-wrapper"><i class="fa fa-star gold-star"></i></div><div class="full-width"><div class="li-header"><div class="li-title"><a href="/posts/2019-07-04-arrowized-frp.html">An Overview of Arrowized FRP
-</a></div><div class="li-date-wrapper"><span class="li-date">04 July 2019
-</span></div></div><p>An explanation of AFRP, from motivations, to principles, and lastly,
-implementation.
-</p><a href="/posts/2019-07-04-arrowized-frp.html" class="btn">Read More</a></div></div></li></ul><ul><li><div class="li-flexbox"><div class="gold-star-wrapper"><i class="fa fa-star gold-star"></i></div><div class="full-width"><div class="li-header"><div class="li-title"><a href="/posts/2019-06-05-loading-dds-files-in-haskell.html">Loading Direct Draw Surface (.dds) Files in Haskell
+/* Generated with Clay, http://fvisser.nl/clay */</style></head><body class="hidden"><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/posts.html" class="btn btn-return"><i class="fas fa-fw fa-chevron-left"></i></a></div><div class="container container-post"><div class="post-header"><h1>Posts tagged &quot;haskell&quot;</h1></div><hr><br class="half-line"><br class="half-line"><div class="post-list"><ul><li><div class="li-flexbox"><div class="gold-star-wrapper"><i class="fa fa-star gold-star"></i></div><div class="full-width"><div class="li-header"><div class="li-title"><a href="/posts/2020-09-16-kinds.html">Kinds: A (Partial) Triptych of Universes
+</a></div><div class="li-date-wrapper"><span class="li-date">16 September 2020
+</span></div></div><p>A comprehensive, no-nonsense rundown of Haskell’s kind system intended
+for beginners.
+</p><a href="/posts/2020-09-16-kinds.html" class="btn">Read More</a></div></div></li></ul><ul><li><div class="li-flexbox"><div class="gold-star-wrapper"><i class="fa fa-star gold-star"></i></div><div class="full-width"><div class="li-header"><div class="li-title"><a href="/posts/2019-06-05-loading-dds-files-in-haskell.html">Loading Direct Draw Surface (.dds) Files in Haskell
 </a></div><div class="li-date-wrapper"><span class="li-date">05 June 2019
 </span></div></div><p>Just a hint to an obscure portion of the friday library that supports
 loading and exporting of Microsoft .dds files.
@@ -1282,4 +1076,4 @@ loading and exporting of Microsoft .dds files.
 </span></div></div><p>An explanation of most Haskell functors encountered in the wild, with a
 focus on breaking down the name of a functor into its individual parts
 such that one can understand other exotic functors.
-</p><a href="/posts/2019-06-02-formula-for-functors.html" class="btn">Read More</a></div></div></li></ul></div></div></div></div></body><script src="js/jquery-1.12.0.min.js"></script><script src="js/scripts.js"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>
+</p><a href="/posts/2019-06-02-formula-for-functors.html" class="btn">Read More</a></div></div></li></ul></div></div></div></div></body><script async src="//cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js" id="MathJax-script"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="/js/scripts.js"></script><script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>

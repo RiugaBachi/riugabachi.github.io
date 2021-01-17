@@ -1,0 +1,1462 @@
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Kinds: An (Incomplete) Triptych of Universes
+</title><link href="/img/favicon.png" rel="icon"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet"><style type="text/css">
+@-webkit-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-moz-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-ms-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-o-keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@keyframes fadeIn
+{
+0.0% 
+{
+  opacity : 0;
+}
+
+100.0% 
+{
+  opacity : 1;
+}
+
+}
+
+@-webkit-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@-moz-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@-ms-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@-o-keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+@keyframes fadeOut
+{
+0.0% 
+{
+  opacity : 1;
+}
+
+100.0% 
+{
+  opacity : 0;
+}
+
+}
+
+.fadedOut
+{
+  -webkit-animation-duration  : 1.0s;
+  -moz-animation-duration     : 1.0s;
+  -ms-animation-duration      : 1.0s;
+  -o-animation-duration       : 1.0s;
+  animation-duration          : 1.0s;
+  -webkit-animation-fill-mode : forwards;
+  -moz-animation-fill-mode    : forwards;
+  -ms-animation-fill-mode     : forwards;
+  -o-animation-fill-mode      : forwards;
+  animation-fill-mode         : forwards;
+  -webkit-animation-name      : fadeOut;
+  -moz-animation-name         : fadeOut;
+  -ms-animation-name          : fadeOut;
+  -o-animation-name           : fadeOut;
+  animation-name              : fadeOut;
+}
+
+.fadedIn
+{
+  -webkit-animation-duration  : 1.0s;
+  -moz-animation-duration     : 1.0s;
+  -ms-animation-duration      : 1.0s;
+  -o-animation-duration       : 1.0s;
+  animation-duration          : 1.0s;
+  -webkit-animation-fill-mode : forwards;
+  -moz-animation-fill-mode    : forwards;
+  -ms-animation-fill-mode     : forwards;
+  -o-animation-fill-mode      : forwards;
+  animation-fill-mode         : forwards;
+  -webkit-animation-name      : fadeIn;
+  -moz-animation-name         : fadeIn;
+  -ms-animation-name          : fadeIn;
+  -o-animation-name           : fadeIn;
+  animation-name              : fadeIn;
+}
+
+*
+{
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  -ms-box-sizing     : border-box;
+  -o-box-sizing      : border-box;
+  box-sizing         : border-box;
+}
+
+::after
+{
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  -ms-box-sizing     : border-box;
+  -o-box-sizing      : border-box;
+  box-sizing         : border-box;
+}
+
+::before
+{
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  -ms-box-sizing     : border-box;
+  -o-box-sizing      : border-box;
+  box-sizing         : border-box;
+}
+
+html
+{
+  margin    : none none none none;
+  padding   : none none none none;
+  width     : 100%;
+  height    : 100%;
+  font-size : 100%;
+}
+
+body
+{
+  font-family           : "Fira Sans";
+  color                 : #383838;
+  background-image      : url("/img/wallpaper.png");
+  background-position   : 79.5% 0%;
+  background-size       : cover;
+  background-color      : #d24d57;
+  background-attachment : fixed;
+}
+
+article
+{
+  display : block;
+}
+
+aside
+{
+  display : block;
+}
+
+details
+{
+  display : block;
+}
+
+figcaption
+{
+  display : block;
+}
+
+figure
+{
+  display : block;
+}
+
+footer
+{
+  display : block;
+}
+
+header
+{
+  display : block;
+}
+
+menu
+{
+  display : block;
+}
+
+nav
+{
+  display : block;
+}
+
+section
+{
+  display : block;
+}
+
+summary
+{
+  display : block;
+}
+
+.hidden
+{
+  display : none;
+}
+
+.header
+{
+  height     : 100%;
+  position   : relative;
+  width      : 100%;
+  min-height : 300px;
+  text-align : left;
+  color      : rgba(255,255,255,0.8784);
+}
+
+.flex
+{
+  display        : flex;
+  flex           : 0 1 auto;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  align-items    : center;
+}
+
+.full-width
+{
+  width : 100%;
+}
+
+.container
+{
+  z-index            : 1;
+  display            : block;
+  margin-left        : none;
+  max-width          : 550px;
+  margin-right       : none;
+  padding-left       : 15px;
+  padding-right      : 15px;
+  background-color   : rgba(255,255,255,0.95);
+  color              : rgba(40,40,40,0.5647);
+  border-radius      : 3px 3px 3px 3px;
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.7);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.7);
+}
+
+.container-post
+{
+  color     : #383838;
+  max-width : none;
+  font-size : 14px;
+  padding   : 15px 35px 15px 35px;
+}
+
+.row
+{
+  margin-top    : 15px;
+  margin-bottom : 15px;
+  text-align    : center;
+}
+
+.row.stylized
+{
+  margin-top    : none;
+  margin-bottom : none;
+}
+
+.controls
+{
+  display        : flex;
+  flex-direction : row;
+  width          : 100%;
+}
+
+.controls-left
+{
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 50%;
+}
+
+.controls-right
+{
+  width    : 255px;
+  height   : 195.5px;
+  overflow : hidden;
+}
+
+.spotify-player
+{
+  background-color   : rgba(0,0,0,0.8784);
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  border             : solid 3px rgba(255,215,0,0.8784);
+  -webkit-transform  : scale(0.84999,0.84999) translate(-9%,-9%);
+  -moz-transform     : scale(0.84999,0.84999) translate(-9%,-9%);
+  -ms-transform      : scale(0.84999,0.84999) translate(-9%,-9%);
+  -o-transform       : scale(0.84999,0.84999) translate(-9%,-9%);
+  transform          : scale(0.84999,0.84999) translate(-9%,-9%);
+}
+
+.wrapper
+{
+  max-width          : 850px;
+  margin             : 4rem auto 4rem auto;
+  background         : rgba(255,255,255,0.2470);
+  color              : #383838;
+  padding            : 2em 2em 2em 2em;
+  border-radius      : 3px 3px 3px 3px;
+  -webkit-box-shadow : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  -moz-box-shadow    : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  -ms-box-shadow     : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  -o-box-shadow      : 0px 0px 10px 0px rgba(40,40,40,0.3);
+  box-shadow         : 0px 0px 10px 0px rgba(40,40,40,0.3);
+}
+
+.wrapper-container
+{
+  width  : auto;
+  margin : auto auto auto auto;
+}
+
+.entry-meta
+{
+  display        : block;
+  text-transform : uppercase;
+  font-size      : 12px;
+  color          : rgba(255,255,255,255.0);
+  padding-left   : 0px;
+}
+
+.entry-meta a
+{
+  color : rgba(255,255,255,255.0);
+}
+
+.entry-meta li
+{
+  list-style-type : none;
+  display         : inline;
+}
+
+.entry-meta .tag
+{
+  display             : inline-block;
+  border-radius       : 3px 3px 3px 3px;
+  border              : solid 1px rgba(0,0,0,0.0);
+  border-color        : rgba(208,209,213,0.5);
+  text-decoration     : none;
+  background-color    : rgba(255,255,255,0.95);
+  color               : #383838;
+  transition-duration : 0.75s;
+  margin              : 2px 6px 2px 6px;
+  -webkit-box-shadow  : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -moz-box-shadow     : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -ms-box-shadow      : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -o-box-shadow       : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  box-shadow          : 0px 0px 8px 0px rgba(40,40,40,0.25);
+}
+
+.entry-meta .tag span
+{
+  float   : left;
+  padding : 4.5px 7px 4.5px 7px;
+}
+
+.entry-meta .tag:hover
+{
+  background-color : rgba(217,217,217,38.878);
+}
+
+.entry-meta .tag .count
+{
+  -webkit-box-shadow : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -moz-box-shadow    : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -ms-box-shadow     : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  -o-box-shadow      : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  box-shadow         : 0px 0px 8px 0px rgba(40,40,40,0.25);
+  background-color   : rgba(38,38,38,13.0);
+  color              : rgba(255,215,0,0.8784);
+  border-radius      : 3px 3px 3px 3px;
+}
+
+.entry-title a
+{
+  text-decoration : none;
+}
+
+.entry-tags
+{
+  display    : block;
+  margin     : -webkit-1rem auto calc(1.5rem - 32px) auto;
+  margin     : -moz-1rem auto calc(1.5rem - 32px) auto;
+  margin     : -ms-1rem auto calc(1.5rem - 32px) auto;
+  margin     : -o-1rem auto calc(1.5rem - 32px) auto;
+  margin     : 1rem auto calc(1.5rem - 32px) auto;
+  text-align : left;
+}
+
+.social-share
+{
+  display    : block;
+  margin-top : 1rem;
+  width      : 30%;
+  float      : right;
+  text-align : right;
+}
+
+.feature
+{
+  transition-duration : 0.5s;
+  color               : rgba(255,255,255,0.8784);
+  padding             : 10em 10em 10em 10em;
+  margin-left         : -4rem;
+  margin-right        : -4rem;
+  margin-top          : -2rem;
+  border-radius       : 3px 3px none none;
+  background-color    : rgba(0,0,0,0.6);
+  background-position : center center;
+}
+
+#disqus_thread
+{
+  width               : 75%;
+  max-width           : 850px;
+  margin              : -3rem auto 4rem auto;
+  background          : #ffffff;
+  color               : #383838;
+  padding             : 2em 2em 2em 2em;
+  border-radius       : 3px 3px 3px 3px;
+  -webkit-box-shadow  : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  -moz-box-shadow     : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  -ms-box-shadow      : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  -o-box-shadow       : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  box-shadow          : 0px 0px 10px 0px rgba(40,40,40,0.7);
+  transition-duration : 0.5s;
+}
+
+.btn
+{
+  -webkit-transition : all 0.15s ease-in 0.0s;
+  -moz-transition    : all 0.15s ease-in 0.0s;
+  -ms-transition     : all 0.15s ease-in 0.0s;
+  -o-transition      : all 0.15s ease-in 0.0s;
+  transition         : all 0.15s ease-in 0.0s;
+  padding            : 10px 18px 10px 18px;
+  margin             : 4px auto 4px auto;
+  display            : inline-block;
+  border             : solid 1px auto;
+  border-color       : #282828;
+  border-radius      : 3px 3px 3px 3px;
+  text-decoration    : none;
+  background         : rgba(255,255,255,0.88);
+  -webkit-box-shadow : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  -moz-box-shadow    : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  -ms-box-shadow     : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  -o-box-shadow      : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  box-shadow         : 0px 0px 10px 0px rgba(40,40,40,0.7333);
+  color              : #282828;
+  background-color   : rgba(255,255,255,0.8784);
+  border-color       : #dd8338;
+  font-size          : 14px;
+}
+
+.btn:hover
+{
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  color              : #ff4136;
+}
+
+.btn-return
+{
+  border-radius      : 2px 2px 2px 2px;
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  background-color   : rgba(255,255,255,0.95);
+  padding            : 16px 15px 16px 15px;
+}
+
+.btn-return:hover
+{
+  -webkit-box-shadow : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  -moz-box-shadow    : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  -ms-box-shadow     : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  -o-box-shadow      : 0px 0px 13px 0px rgba(40,40,40,0.85);
+  box-shadow         : 0px 0px 13px 0px rgba(40,40,40,0.85);
+}
+
+.btn-social
+{
+  color     : #282828;
+  font-size : 23px;
+  padding   : 4px 4px 4px 4px;
+  margin    : 0px 8px 0px 8px;
+}
+
+
+.stylized .btn
+{
+  margin      : 10px 10px 10px 10px;
+  font-size   : 16px;
+  font-weight : 300;
+}
+
+hr
+{
+  border           : none 0px rgba(0,0,0,0.0);
+  height           : 3px;
+  opacity          : 0.29999;
+  margin           : 15px auto 15px auto;
+  background-image : -webkit-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : -moz-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : -ms-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : -o-linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+  background-image : linear-gradient(right,rgba(255,255,255,0.0) 0%,#000000 50%,rgba(255,255,255,0.0) 100%);
+}
+
+hr .light
+{
+  opacity : 0.2;
+}
+
+img
+{
+  display         : block;
+  max-width       : 100%;
+  width           : auto;
+  height          : auto;
+  vertical-align  : top;
+  background-size : cover;
+  margin-left     : auto;
+  margin-right    : auto;
+  border          : solid 0px rgba(255,255,255,0.8784);
+}
+
+.img-circle
+{
+  border-radius      : 50% 50% 50% 50%;
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
+  margin-top         : 20px;
+  border             : solid 3px rgba(255,215,0,0.85);
+  height             : 200px;
+  width              : 200px;
+}
+
+.author-photo
+{
+  margin-top       : 12px;
+  width            : 128px;
+  height           : 128px;
+  border-radius    : 50% 50% 50% 50%;
+  border           : solid 2px rgba(255,215,0,0.8784);
+  background-color : rgba(0,0,0,0.8784);
+}
+
+.image-right
+{
+  float  : right;
+  margin : none auto auto 1em;
+}
+
+figure
+{
+  margin  : none none none none;
+  padding : 10px auto 10px auto;
+}
+
+figure img
+{
+  margin-bottom : 10px;
+  border-radius : 4px 4px 4px 4px;
+}
+
+
+figure.half img
+{
+  width  : -webkit-calc(50% - 4px);
+  width  : -moz-calc(50% - 4px);
+  width  : -ms-calc(50% - 4px);
+  width  : -o-calc(50% - 4px);
+  width  : calc(50% - 4px);
+  float  : left;
+  margin : auto 1px auto 1px;
+}
+
+figure.half figcaption
+{
+  clear : left;
+}
+
+
+figure .third img
+{
+  width  : -webkit-calc(33.29999% - 6px);
+  width  : -moz-calc(33.29999% - 6px);
+  width  : -ms-calc(33.29999% - 6px);
+  width  : -o-calc(33.29999% - 6px);
+  width  : calc(33.29999% - 6px);
+  float  : left;
+  margin : auto 1px auto 1px;
+}
+
+.group-container
+{
+  border-radius : 3px 3px 3px 3px;
+  border-color  : #282828;
+  border        : solid 1px auto;
+}
+
+.group-arrow
+{
+  border-color : #383838;
+}
+
+.reading-time
+{
+  text-align    : center;
+  font-weight   : 300;
+  margin-bottom : 10px;
+}
+
+
+pre .highlight
+{
+  padding : 1em 1em 1em 1em;
+}
+
+div > .sourceCode
+{
+  -webkit-box-shadow : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -moz-box-shadow    : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -ms-box-shadow     : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -o-box-shadow      : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  box-shadow         : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+}
+
+.sourceCode
+{
+  background-color : #121212;
+  color            : #e8e8e8;
+  font-family      : "JetBrainsMonoMedium Nerd Font Mono";
+  font-size        : 12px;
+  border-radius    : 4px 4px 4px 4px;
+}
+
+.sourceCode pre
+{
+  overflow-x : hidden;
+  position   : relative;
+  margin     : none none none none;
+  padding    : 1em 1em 1em 1em;
+}
+
+.sourceCode .hll
+{
+  background-color : #49483e;
+}
+
+.sourceCode .co
+{
+  color : #75715e;
+}
+
+.sourceCode .err
+{
+  color : #950050;
+}
+
+.sourceCode .ge
+{
+  font-style : italic;
+}
+
+.sourceCode .gs
+{
+  font-weight : bold;
+}
+
+.sourceCode .ot
+{
+  color       : #f92672;
+  font-weight : bold;
+}
+
+.sourceCode .kw
+{
+  color       : #f92672;
+  font-weight : bold;
+}
+
+.sourceCode .op
+{
+  color       : #f92672;
+  font-weight : bold;
+}
+
+.sourceCode .dt
+{
+  color : #e6db74;
+}
+
+.sourceCode .st
+{
+  color : #a6e22e;
+}
+
+title
+{
+  text-align  : center;
+  font-weight : bold;
+}
+
+blockquote
+{
+  font-family  : "serif";
+  font-style   : italic;
+  border-left  : solid 6px #444444;
+  padding-left : 20px;
+  margin       : 0px 0px 0px 0px;
+}
+
+a
+{
+  transition-duration : 0.4s;
+  color               : #444444;
+}
+
+a:link
+{
+  color : #444444;
+}
+
+a:visited
+{
+  color : #444444;
+}
+
+a:hover
+{
+  color : #ff4136;
+}
+
+a:active
+{
+  transition-duration : 0.3s;
+  color               : #ff4136;
+}
+
+figcaption
+{
+  padding-top : 10px;
+  font-size   : 14px;
+  color       : #8b8b8b;
+}
+
+pre,
+code
+{
+  font-family : "JetBrainsMonoMedium Nerd Font Mono";
+  overflow-x  : auto;
+}
+
+table
+{
+  width : 100%;
+}
+
+p pre,
+p code,
+li pre,
+li code
+{
+  font-size        : 14px;
+  background-color : #e8e8e8;
+  border           : solid 1px #d0d1d5;
+  border-radius    : 4px 4px 4px 4px;
+  margin           : 0px 2px 0px 2px;
+  padding          : 0px 5px 0px 5px;
+}
+
+li .highlight pre,
+li .highlight code
+{
+  background-color : rgba(0,0,0,0.0);
+  border           : solid 0px rgba(0,0,0,0.0);
+}
+
+.math
+{
+  font-size   : 18px;
+  font-family : "serif";
+}
+
+.notice
+{
+  margin-top       : 1.5em;
+  padding          : 0.5em 1em 0.5em 1em;
+  text-indent      : 0px;
+  font-size        : 14px;
+  background-color : #282828;
+  border           : solid 1px #d0d1d5;
+  border-radius    : 3px 3px 3px 3px;
+}
+
+dt
+{
+  font-weight : bolder;
+}
+
+.stylized
+{
+  font-size   : 1rem;
+  font-weight : 300;
+}
+
+.site-title
+{
+  margin-top    : 22px;
+  margin-bottom : 12px;
+  font-size     : 1.32rem;
+  font-weight   : 300;
+}
+
+.content
+{
+  font-size     : 14px;
+  line-height   : 1.85;
+  margin-bottom : 0.925rem;
+  text-align    : justify;
+}
+
+.btn-return-wrapper
+{
+  text-align    : center;
+  font-weight   : bold;
+  margin-bottom : 3rem;
+  margin-top    : -webkit-calc(4rem - 48px);
+  margin-top    : -moz-calc(4rem - 48px);
+  margin-top    : -ms-calc(4rem - 48px);
+  margin-top    : -o-calc(4rem - 48px);
+  margin-top    : calc(4rem - 48px);
+}
+
+.post-header
+{
+  text-align    : center;
+  font-weight   : bold;
+  margin-bottom : 2rem;
+}
+
+.half-line
+{
+  line-height : 0.29999;
+}
+
+h3.stylized a
+{
+  color           : #282828;
+  text-decoration : none;
+}
+
+.gold-star-wrapper
+{
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  margin-bottom   : 20px;
+  margin-left     : 8px;
+  margin-right    : 50px;
+}
+
+.gold-star
+{
+  color     : rgba(255,215,0,0.8784);
+  font-size : 1.75rem;
+}
+
+.li-header
+{
+  display         : flex;
+  justify-content : space-between;
+}
+
+.li-title
+{
+  float   : left;
+  padding : 0px 0px 0px 0px;
+}
+
+.li-date-wrapper
+{
+  display     : flex;
+  align-items : center;
+}
+
+.li-date
+{
+  float      : right;
+  text-align : right;
+  margin     : 0px auto 0px auto;
+}
+
+.li-flexbox
+{
+  display        : flex;
+  flex-direction : row;
+}
+
+.post-list
+{
+  text-align : left;
+}
+
+.post-list ul
+{
+  list-style         : none inside none;
+  padding-left       : 0px;
+  background-color   : rgba(0,0,0,0.0);
+  -webkit-box-shadow : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -moz-box-shadow    : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -ms-box-shadow     : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+  box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.7333);
+}
+
+.post-list li
+{
+  background-color : rgba(0,0,0,0.0);
+  padding          : 11px 16px 11px 16px;
+  border-radius    : 3px 3px 3px 3px;
+  text-decoration  : none;
+  background       : -webkit-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : -moz-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : -ms-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : -o-linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  background       : linear-gradient(left,rgba(0,0,0,0.8784) 75px,rgba(255,215,0,0.8784) 75px,rgba(255,215,0,0.8784) 81px,rgba(0,0,0,0.8784) 81px,rgba(255,255,255,0.8784) 84px);
+  color            : #282828;
+}
+
+.post-list li a
+{
+  transition-duration : 0.2s;
+  font-size           : 20px;
+  text-decoration     : none;
+  color               : #282828;
+  font-weight         : bolder;
+}
+
+.post-list li a:hover
+{
+  color : #ff4136;
+}
+
+.post-list li p
+{
+  font-weight : 300;
+  font-size   : 16px;
+  margin-top  : 4px;
+}
+
+.post-list li .btn
+{
+  font-size   : 14px;
+  font-weight : bolder;
+}
+
+
+/* Generated with Clay, http://fvisser.nl/clay */</style></head><body class="hidden"><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/posts.html" class="btn btn-return"><i class="fas fa-fw fa-chevron-left"></i></a></div><div class="container container-post"><div class="post-header"><h1>Kinds: An (Incomplete) Triptych of Universes
+</h1><h4>16 September 2020
+</h4><p class="reading-time"><i class="far fa-clock"></i> Reading time ~84 minutes</p></div><hr><br class="half-line"><p>Time and again, kinds have proven themselves to be a confusing concept for many Haskell beginners. Chances are, if you have been learning or using Haskell for some time now, you have likely ran into a kind-related error such as the following:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">instance</span> <span class="dt">Monad</span> <span class="dt">Bool</span> <span class="kw">where</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>  • <span class="dt">Expected</span> kind ‘<span class="op">*</span> <span class="ot">-&gt;</span> <span class="op">*</span>’, but ‘<span class="dt">Bool</span>’ has kind ‘<span class="op">*</span>’</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  • <span class="dt">In</span> the first argument <span class="kw">of</span> ‘<span class="dt">Monad</span>’, namely ‘<span class="dt">Bool</span>’</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    <span class="dt">In</span> the <span class="kw">instance</span> declaration for ‘<span class="dt">Monad</span> <span class="dt">Bool</span>’</span></code></pre></div>
+<p><br/> Surprisingly, there have been absolutely no articles to date which tackle Haskell’s kind system comprehensively, offering mere crumbs of knowledge scattered here and there which beginners have to piece together with enough perseverance and learning aptitude. This article seeks to provide a from-scratch explanation of the kind system, its motivations, shortcomings, and semantics in the context of Haskell. The end goal of this article is that even beginners should be able to take a good look at the <code>singletons</code> library and have a decent grasp of the peculiar ways in which kinds are employed in its design.</p>
+<h1 id="values-types-and-kinds">Values, Types, and Kinds</h1>
+<p>Most programming languages out in the wild have some notion of types and values. In Rust, for instance, we have the primitive type <code>bool</code> which has two values: <code>true</code> and <code>false</code>. Similarly, we have the abstract data type <code>Bool</code> in Haskell, containing two possible values in the form of the constructors <code>True</code> and <code>False</code>. However, Haskell takes this a step further by attaching a special sort of ‘type’ <em>to</em> types, which we call kinds.</p>
+<p>Let us take a look at the kinds of several common Haskell data types:</p>
+<ol type="1">
+<li><code>Bool</code> has the kind <code>Type</code>, notated <code>Bool :: Type</code></li>
+<li><code>Maybe</code> has the kind <code>Type -&gt; Type</code>, notated <code>Maybe :: Type -&gt; Type</code></li>
+<li><code>Either</code> has the kind <code>Type -&gt; Type -&gt; Type</code>, notated <code>Either :: Type -&gt; Type -&gt; Type</code></li>
+<li><code>forall a b. Either a b</code> has the kind <code>Type</code>, notated <code>Either a b :: Type</code></li>
+</ol>
+<p><code>Type</code> is one of the primitive kinds in Haskell. <strong><code>Type</code> is the kind of all fully-specialized, user-definable data types.</strong> <code>Type</code> is also aliased as <code>*</code>, which you will see in compiler error messages instead; we can use these two synonyms interchangeably, albeit modern GHC now discourages using <code>*</code>. The reason for this is that <code>*</code> was more or less a design oversight; it was convenient to type and looked like a ‘type wildcard’ symbol that was intuitive to think about, however in modern times it conflicts with the type-level natural multiplication operator <code>(*) :: Nat -&gt; Nat -&gt; Nat</code> which we will briefly go over later in this article.</p>
+<p>Let us start with <code>Bool</code>. <code>Bool</code> has kind <code>Type</code> because it is (quite literally) just a type.</p>
+<p>What about <code>Maybe :: Type -&gt; Type</code>? Conceptually, we can think of Maybe as a type-level function taking some type <code>a</code> and returning a new type <code>Maybe a</code>, hence the function arrow syntax. The same logic applies to our third example of <code>Either :: Type -&gt; Type -&gt; Type</code>, which takes two type inputs instead of one, hence the double function arrow syntax.</p>
+<p>Our fourth and final example serves to contrast the third example: that <code>Either</code> and <code>Either a b</code> have <em>completely different types</em>. We refer to the “type constructor” Either <em>by itself</em> in the third example, and this “constructor” does indeed take two type inputs to produce a new type <code>Either a b</code>. In our fourth example, however, we have <em>already applied</em> the “type constructor” <code>Either</code> to two universally-quantified variables, thus its type reduces down to just <code>Type</code>. These semantics are no different from how the type of some function <code>f :: a -&gt; a -&gt; a</code> by itself differs from its fully-applied form <code>f x y :: a</code>.</p>
+<p>Like a regular function, we can also partially apply these “type constructors”, which can help us reduce their arity down enough to match that of a particular type variable’s kind, as you will see later. <strong><em>Unlike</em></strong> a regular function, however, there is currently no such thing as a ‘type-level lambda’. As such, this sort of declaration would be malformed:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">-- | A hypothetical way to make a Functor instance for Either in its first argument</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="co">-- instead of its second, if only it worked, that is.</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="kw">instance</span> <span class="dt">Functor</span> (\c <span class="ot">-&gt;</span> <span class="dt">Either</span> c a) <span class="kw">where</span></span></code></pre></div>
+<p>You can already see why type-level lambdas might be problematic: we would be able to make two perfectly valid <code>Functor</code> instances for <code>Either</code>, one in each argument, and <code>fmap</code> dispatch would be undecidable if both arguments to <code>Either</code> are the same type. Normally, we would create a <code>newtype</code> wrapper instead to achieve this sort of design, which would ‘flip’ the order of the type variables to allow for the alternate instance.</p>
+<h2 id="implicit-kinds">Implicit Kinds</h2>
+<p>Thinking of types as higher-level functions is key to understanding and avoiding kind errors. Remember that you can view the kind of any type in GHCi by typing <code>:k TypeName</code>. That said, this may not be the most efficient workflow for many Haskellers. Ideally, we should be able to deduce the kinds of type variables by just looking at how they are used in context. Let us take a look at the declaration of the class of monad transformers, <code>MonadTrans</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">class</span> <span class="dt">MonadTrans</span> t <span class="kw">where</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="ot">  lift ::</span> m a <span class="ot">-&gt;</span> t m a</span></code></pre></div>
+<p>We have three type variables in this declaration: <code>t</code>, <code>m</code>, and <code>a</code>. To aid in our deduction of their kinds, the first thing we want to acknowledge is the kind of the function arrow <code>(-&gt;)</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ot">(-&gt;) ::</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Type</span>  </span></code></pre></div>
+<p>Surprisingly, the function arrow <strong><em>only takes fully-applied types</em></strong> as parameters. You will get a type error if either side of a function arrow contains a higher-arity kind such as <code>(Type -&gt; Type)</code>. As such, we can deduce from the method signature <code>lift :: m a -&gt; t m a</code> that <code>m a :: Type</code> and <code>t m a :: Type</code>.</p>
+<p>Since type variable application is left-associative like function application, we can deduce that:</p>
+<ul>
+<li><code>m a</code> is similar to <code>f x</code></li>
+<li><code>t m a</code> is really just <code>(t m) a</code>, which is similar to <code>f x y</code> = <code>(f x) y</code></li>
+</ul>
+<p>As such, we can further deduce:</p>
+<ul>
+<li><code>m</code> has kind <code>Type -&gt; Type</code></li>
+<li><code>a</code> has kind <code>Type</code></li>
+<li>With these assumptions, <code>m a</code> reduces to <code>Type</code>, which is correct.</li>
+<li>It follows that <code>t</code> has kind <code>(Type -&gt; Type) -&gt; Type -&gt; Type</code>.
+<ul>
+<li>By virtue of referencing the same variables <code>m</code> and <code>a</code> that we already know the kinds of.</li>
+</ul></li>
+</ul>
+<p>This is the style of critical thinking that should be applied when reasoning about implicit kinds. Remember that <strong><em>without further context*</em></strong>, the kind of a type variable <strong><em>always</em></strong> defaults to <code>Type</code>. If you wish to specify a different kind, you need to add <strong><em>explicit kind signatures</em></strong>.</p>
+<p>* - “Context” in this case also includes the presence of <code>-XPolyKinds</code>, covered later on</p>
+<h2 id="kind-signatures">Kind Signatures</h2>
+<p>Let us analyze what is going on behind kind signature expressions such as <code>a :: *</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="op">&lt;</span><span class="kw">type</span><span class="op">&gt;</span><span class="ot"> ::</span> <span class="op">&lt;</span><span class="kw">type</span><span class="op">&gt;</span></span></code></pre></div>
+<p>The fact that the right hand side of the expression is simply <code>&lt;type&gt;</code> instead of <code>&lt;kind&gt;</code> may seem erroneous at first glance, but this is <em>precisely</em> how GHC Haskell encodes kinds. You see, kinds <strong><em>are just types</em></strong>. What we like to think of the kind <code>*</code>/<code>Type</code> is actually just a cyclic <a href="https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Kind.html#t:Type">type synonym defined in Data.Kind</a> as follows:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">type</span> <span class="dt">Type</span> <span class="ot">=</span> <span class="dt">Type</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="kw">type</span> <span class="op">*</span> <span class="ot">=</span> <span class="dt">Type</span></span></code></pre></div>
+<p>What is interesting about how <code>Type</code> is defined is that it relies on some compiler magic. If you try to define a similar cyclic type synonym, you will get an error like the following:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">type</span> <span class="dt">Artificial</span> <span class="ot">=</span> <span class="dt">Artificial</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>  <span class="dt">Cycle</span> <span class="kw">in</span> <span class="kw">type</span> synonym declarations<span class="op">:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>    <span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="kw">type</span> <span class="dt">Artificial</span> <span class="ot">=</span> <span class="dt">Artificial</span></span></code></pre></div>
+<p>An interesting property of this realization that kinds are just types is that, if the left hand side of a kind signature is a <em>type variable</em>, then <strong><em>any type can appear in the right hand side</em></strong>, even if those kinds are <em>uninhabited</em>. Strictly within the context of Haskell, we say a kind is <strong>uninhabited</strong> when there there are no types which have that particular kind. Take, for instance, the following:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="ot">{-# LANGUAGE EmptyDataDecls #-}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="co">-- | We create an &#39;artificial&#39; kind in the style that the kind &#39;Type&#39; is defined.</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Artificial</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a><span class="co">-- | We specify that the type variable @a@ has kind &#39;Artificial&#39;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Irreducible</span> (<span class="ot">a ::</span> <span class="dt">Artificial</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a><span class="co">-- | We use () for demonstration purposes here but this could be any other type.</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a><span class="co">-- Recall that &#39;Artificial :: Type&#39;, so not even that will help us here. </span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a><span class="ot">f ::</span> <span class="dt">Irreducible</span> ()</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>f <span class="ot">=</span> <span class="fu">undefined</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a><span class="co">-- | Oh no! There are absolutely no types in Haskell with our kind &#39;Artificial&#39;,</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a><span class="co">-- making it impossible for us to fully apply &#39;Irreducible&#39; down to the kind &#39;Type&#39;</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true"></a>    • <span class="dt">Expected</span> kind ‘<span class="dt">Artificial</span>’, but ‘()’ has kind ‘<span class="op">*</span>’</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true"></a>    • <span class="dt">In</span> the first argument <span class="kw">of</span> ‘<span class="dt">Irreducible</span>’, namely ‘()’</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true"></a>      <span class="dt">In</span> the <span class="kw">type</span> signature<span class="op">:</span><span class="ot"> f ::</span> <span class="dt">Irreducible</span> ()</span></code></pre></div>
+<p>In other words, while you can theoretically put any type on the right hand side of a kind signature of a type variable, it says nothing bout whether there exists a type that can substituted into that type variable to begin with. If we were to use types-as-kinds naively like this, we would simply create unusable code. The compiler assigns all fully-applied top-level user-defined data types the kind <code>Type</code> and there is simply <em>no way around this</em>. To attempt otherwise would result in an error similar to the following:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="ot">{-# LANGUAGE EmptyDataDecls, DataKinds, KindSignatures #-}</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Artificial</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a><span class="co">-- | We specify that the whole type &#39;Unreducible (a :: Artificial)&#39; has kind &#39;Artificial&#39;.</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a><span class="co">-- This is different from just saying &#39;Unreducible&#39; by itself, which has kind </span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a><span class="co">-- &#39;Artificial -&gt; Artificial&#39;.</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Unreducible</span> (<span class="ot">a ::</span> <span class="dt">Artificial</span>)<span class="ot"> ::</span> <span class="dt">Artificial</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>  • <span class="dt">Kind</span> signature on <span class="kw">data</span> <span class="kw">type</span> declaration has non<span class="op">-*</span> <span class="fu">return</span> kind <span class="dt">Artificial</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a>  • <span class="dt">In</span> the <span class="kw">data</span> declaration for ‘<span class="dt">Unspecializable</span>’</span></code></pre></div>
+<p>As such, if we are to write meaningful code, care must be taken to only use <em>inhabited</em> kinds on the right hand side of a type variable kind signature.</p>
+<h2 id="list-of-inhabited-kinds">List of Inhabited Kinds</h2>
+<p>Fortunately, <code>Type</code> is not the only inhabited kind in GHC Haskell. If this were the case, a kind system would be useless since we can assume all types have the same kind to begin with. The following is a list of <em>all</em> inhabited kinds in modern GHC 8.10.x -era Haskell:</p>
+<ul>
+<li><code>Type</code> / <code>*</code>, the kind of all regular, user-definable data types
+<ul>
+<li><code>Int :: Type</code></li>
+<li><code>forall a. [a] :: Type</code></li>
+<li><code>forall a. Maybe a :: Type</code></li>
+</ul></li>
+<li><code>Constraint</code>, the kind of constraint expressions
+<ul>
+<li><code>forall a. (Show a) :: Constraint</code></li>
+<li><code>forall a. (Show a, Ord a) :: Constraint</code></li>
+<li><code>forall a b. (Show a, (Ord a, Eq b)) :: Constraint</code></li>
+</ul></li>
+<li><code>Nat</code>, the kind of type-level natural numbers
+<ul>
+<li>As seen in declarations such as <code>Vec 5 a</code></li>
+<li><code>1 :: Nat</code></li>
+<li><code>2 :: Nat</code></li>
+<li><code>3 :: Nat</code></li>
+</ul></li>
+<li><code>Symbol</code>, the kind of type-level string literals
+<ul>
+<li>As seen in declarations such as <code>HasField "someField" x</code></li>
+<li><code>"foo" :: Symbol</code></li>
+<li><code>"bar" :: Symbol</code></li>
+<li><code>"baz" :: Symbol</code></li>
+</ul></li>
+<li>Data kinds
+<ul>
+<li><code>[k]</code> forall inhabited kinds <code>k</code>, the kind of type-level lifted list constructors
+<ul>
+<li>(:) and [] are constructors for the list data type</li>
+<li>Therefore, there exists lifted representations of these: <code>(':)</code> and <code>'[]</code></li>
+<li>Thus, one can define type-level lists using familiar syntax: <code>(Int ': '[]) :: [Type]</code></li>
+<li>Special case: list syntax is also lifted: <code>'[Int, Char, Bool] :: [Type]</code></li>
+</ul></li>
+<li>All other user-defined data type constructors
+<ul>
+<li>Every constructor <code>A :: t</code> of some type will have a generated type-level lifted variant <code>'A :: t</code></li>
+<li>In other words, the type-level variant has a kind referring to the type signature of the original</li>
+<li>Ex. a GADT constructor <code>A :: forall a. Int -&gt; Maybe a -&gt; X a</code> has lifted variant <code>'A :: forall a. Int -&gt; Maybe a -&gt; X a</code></li>
+<li>This will make more sense further below</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>We have previously discussed the kind <code>Type</code>. In the following sections, we will go over all these other kinds one by one.</p>
+<h2 id="constraint-kinds">Constraint Kinds</h2>
+<p>Requires <code>{-# LANGUAGE ConstraintKinds #-}</code>, which enables the <code>Constraint</code> kind for constraints.</p>
+<p>In crude terms, a constraint refers the part to the left of the <code>forall x y z.</code> (if present) and right of the <code>=&gt;</code> in a function signature, class head, instance head, or data declaration:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="ot">f ::</span> <span class="kw">forall</span> a<span class="op">.</span> <span class="ot">-&gt;</span> (<span class="dt">Show</span> a, <span class="dt">Ord</span> a) <span class="ot">&lt;-</span> <span class="ot">=&gt;</span> a</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="kw">class</span> <span class="ot">-&gt;</span> (<span class="kw">forall</span> m<span class="op">.</span> <span class="dt">Monad</span> (t m)) <span class="ot">&lt;-</span> <span class="ot">=&gt;</span> <span class="dt">MonadTransProper</span> t <span class="kw">where</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a><span class="kw">instance</span> <span class="ot">-&gt;</span> (a <span class="op">~</span> b) <span class="ot">&lt;-</span> <span class="ot">=&gt;</span> <span class="dt">Show</span> (a,b) <span class="kw">where</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a><span class="kw">data</span> <span class="ot">-&gt;</span> <span class="dt">BadPractice</span> a <span class="ot">&lt;-</span> <span class="ot">=&gt;</span> <span class="dt">DontDoThis</span></span></code></pre></div>
+<p><br/> Constraints are all tuples, and each element of a constraint tuple must itself be a constraint. When we write a singular constraint such as <code>f :: Show a =&gt; a</code>, what we are really declaring is the 1-tuple <code>f :: (Show a) =&gt; a</code>. Similarly, constraint tuples can be nested, but their semantics will behave as though they are “flattened”. In other words, <code>f :: (Show a, (Ord a, Eq a)) =&gt; a</code> <span class="math inline">\(\cong\)</span> <code>f :: (Show a, Ord a, Eq a) =&gt; a</code>.</p>
+<p><strong><em>All type classes have a kind which reduce down to <code>Constraint</code></em></strong>. For instance, <code>MonadTrans :: (Type -&gt; Type) -&gt; Type -&gt; Type -&gt; Constraint</code>, which is just the kind of its type parameter <code>t</code> (which we have proven above) <em>to</em> <code>Constraint</code>. When we fully apply a type class to one or more type variables, we get a plain old <code>Constraint</code>, which we can then include in a constraint tuple.</p>
+<p>Each individual 1-tuple constraint in a constraint tuple refers to a <strong>type class</strong>. Even the type equality operator <code>~</code> and kind equality operator <code>~~</code> are <a href="http://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Type-Equality.html">infix type classes defined in the base library</a>.</p>
+<p>The key takeaway with constraint kinds is this: <strong><em>all constraints have the same kind <code>Constraint</code> no matter how large the tuple is or how nested the tuple is</em></strong>. <code>forall a. (Show a) :: Constraint</code> just as <code>forall a t. ((Show a, Ord a), Eq a, forall m. Monad (t m)) :: Constraint</code>. The fact that we can attach a unique kind to constraints allows us to use constraints in type synonym and type family declarations, which allow for polymorphic-constraint programming:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="co">-- | A type family which converts a type-level list of constraints to a `Constraint` tuple</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="kw">type</span> <span class="kw">family</span> <span class="dt">ToConstraint</span> (<span class="ot">xs ::</span> [<span class="dt">Constraint</span>])<span class="ot"> ::</span> <span class="dt">Constraint</span> <span class="kw">where</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>  <span class="co">-- | Base case: an empty list is the empty constraint tuple (), i.e. no constraint</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>  <span class="dt">ToConstraint</span> &#39;[] <span class="ot">=</span> ()</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>  <span class="co">-- | Match on the head @x@ of the list and unfold a constraint tuple recursively.</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>  <span class="co">-- It will look like (c1, (c2, (c3, (c4, (c5))))) by the end of the unfolding.</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a>  <span class="dt">ToConstraint</span> (x &#39;<span class="op">:</span> xs) <span class="ot">=</span> (x, <span class="dt">ToConstraint</span> xs)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true"></a><span class="co">-- | Now we can write our constraints as lists instead of tuples!</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true"></a><span class="co">-- Why would we want to do this? For no reason in particular, it just looks marginally nicer.</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true"></a><span class="co">-- Constraint kinds are more useful as associated types in type classes or data parameters.</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true"></a><span class="ot">foo ::</span> <span class="kw">forall</span> a<span class="op">.</span> <span class="dt">ToConstraint</span> &#39;[<span class="dt">Show</span> a, <span class="dt">Ord</span> a] <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true"></a>foo <span class="ot">=</span> <span class="fu">id</span></span></code></pre></div>
+<h2 id="data-kinds">Data Kinds</h2>
+<p>The <code>DataKinds</code> extension generates type-level lifted representations of data constructors for us, whose kinds are the type of the data constructor. These lifted constructors are referenced by a front tick <code>'</code> in front of the constructor name:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="ot">{-# LANGUAGE DataKinds #-}</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Example</span> a <span class="kw">where</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>  <span class="dt">Foo</span><span class="ot"> ::</span> <span class="dt">Example</span> ()</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a>  <span class="dt">Bar</span><span class="ot"> ::</span> <span class="kw">forall</span> a x y<span class="op">.</span> x y <span class="ot">-&gt;</span> x a <span class="ot">-&gt;</span> <span class="dt">Example</span> (x y)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a>  <span class="dt">Baz</span><span class="ot"> ::</span> a <span class="ot">-&gt;</span> <span class="dt">Example</span> a</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true"></a><span class="co">-- | The above GADT will conceptually generate the following lifted constructors for us:</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">&#39;Foo</span><span class="ot"> ::</span> <span class="dt">Example</span> ()</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">&#39;Bar</span><span class="ot"> ::</span> <span class="kw">forall</span> k (<span class="ot">a ::</span> k) (<span class="ot">x ::</span> k <span class="ot">-&gt;</span> <span class="dt">Type</span>) (<span class="ot">y ::</span> k)<span class="op">.</span> x y <span class="ot">-&gt;</span> x a <span class="ot">-&gt;</span> <span class="dt">Example</span> (x y)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">&#39;Baz</span><span class="ot"> ::</span> <span class="kw">forall</span> a<span class="op">.</span> a <span class="ot">-&gt;</span> <span class="dt">Example</span> a</span></code></pre></div>
+<p>In practice, data kinds allow us to define our own closed kinds, allowing for better type safety in certain areas. For instance, it can be used to make certain type families <em>total</em>, whereas otherwise one would have to write a redundant catch-all instance if it were parameterized over <code>Type</code>. If you will also notice, <code>'Bar</code> has a similar arity-2 signature “shape” to <code>Either</code>. <code>'Bar</code> applied to two types reduces down to <code>z ~ (x y) =&gt; Example z</code>, which parallels <code>Type</code>. It may therefore be more intuitive to think of <code>'Bar</code> like the following:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">data</span> (<span class="kw">forall</span> k (<span class="ot">a ::</span> k) (<span class="ot">x ::</span> k <span class="ot">-&gt;</span> <span class="dt">Type</span>) (<span class="ot">y ::</span> k)<span class="op">.</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>  (f <span class="op">~</span> x y, g <span class="op">~</span> x a) <span class="ot">=&gt;</span> <span class="dt">&#39;Bar</span> f<span class="ot"> g ::</span> <span class="dt">Example</span> (x y)) </span></code></pre></div>
+<p>This also means that one can “match” on the type parameters of <code>'Bar</code> like they would with <code>Either</code>: <code>(x ~ 'Bar f g)</code>; <code>(x ~ Either f g)</code>. Likewise, the same applies to <code>'Baz</code>, albeit it may be more appropriate to compare it to <code>Maybe</code> instead.</p>
+<h3 id="type-level-naturals-and-string-literals">Type-level Naturals and String Literals</h3>
+<p>Type-level naturals and string literals are supported by GHC as the special kinds <code>Nat</code> and <code>Symbol</code> respectively. The motivation for providing special kinds for these is that the set of natural numbers and strings is <em>infinite</em>. In order to conveniently program with type-level natural numbers and strings, we do not want to use clunky Peano number -like constructs such as represent <code>5</code> with <code>(S (S (S (S (S Z)))))</code>. As a result, GHC provides “magical” automatically-generated types for the natural numbers and strings with their respective kinds in order to facilitate this sort of type-level programming.</p>
+<p>Conceptually, we can think of the types <code>Natural</code> and <code>String</code> as ADTs defined as follows:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Natural</span> <span class="ot">=</span> <span class="dv">1</span> <span class="op">|</span> <span class="dv">2</span> <span class="op">|</span> <span class="dv">3</span> <span class="op">|</span> <span class="dv">4</span> <span class="op">|</span> <span class="dv">5</span> <span class="op">|</span> <span class="op">...</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">String</span> <span class="ot">=</span> <span class="st">&quot;a&quot;</span> <span class="op">|</span> <span class="st">&quot;aa&quot;</span> <span class="op">|</span> <span class="st">&quot;ab&quot;</span> <span class="op">|</span> <span class="st">&quot;abc&quot;</span> <span class="op">|</span> <span class="op">...</span></span></code></pre></div>
+<p>Following from DataKinds behavior, these would generate the types <code>'1, '2, '3, ...</code> and <code>'"a", '"aa", '"aab", ...</code>, however in reality these ADTs are not defined like this due to their infinite nature. They rely on some compiler magic, and thus their DataKinds representation is unique from the rest: we can refer to their “constructors” without ticks in front, and they do not bear the kind of their data type. That is to say, <code>'1 :: Natural</code> and <code>"aab" :: [Char]</code> is simply incorrect. Their kinds are instead specially assigned to <code>Nat</code> and <code>Symbol</code>.</p>
+<p>Consider taking a look at the <a href="https://hackage.haskell.org/package/base-4.14.0.0/docs/GHC-TypeLits.html">GHC.TypeLits module</a> for a list of type synonyms, type families, and functions for working with the <code>Nat</code> and <code>Symbol</code> kinds. The following is a snippet showcasing usage of this module:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="co">-- | We need &#39;NoStarIsType&#39; if we want to use the &#39;(*) :: Nat -&gt; Nat -&gt; Nat&#39; type operator</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a><span class="co">-- otherwise GHC will interpret &#39;*&#39; as the synonym for &#39;Type&#39;.</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a><span class="ot">{-# LANGUAGE NoStarIsType, TypeOperators, TypeApplications, ConstraintKinds, RankNTypes #-}</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a><span class="kw">import</span> <span class="dt">GHC.TypeLits</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a><span class="co">-- | The idea behind this function is simple. We pass to it a @Proxy c@ to disambiguate the</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a><span class="co">-- constraint variable @c@, and if the constraint holds, this function will typecheck and </span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a><span class="co">-- print &quot;Typechecks&quot; in GHCi.</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a><span class="ot">prop ::</span> <span class="kw">forall</span> c<span class="op">.</span> c <span class="ot">=&gt;</span> <span class="dt">Proxy</span> c <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a>prop _ <span class="ot">=</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>((<span class="dv">5</span> <span class="op">*</span> <span class="dv">3</span>) <span class="op">~</span> <span class="dv">15</span>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>((<span class="dv">15</span> <span class="op">/</span> <span class="dv">3</span>) <span class="op">~</span> <span class="dv">5</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>((<span class="dv">5</span> <span class="op">-</span> <span class="dv">2</span>) <span class="op">~</span> <span class="dv">3</span>)</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>((<span class="dv">5</span> <span class="op">+</span> <span class="dv">2</span>) <span class="op">~</span> <span class="dv">7</span>)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>((<span class="dv">0</span> <span class="op">-</span> <span class="dv">1</span>) <span class="op">~</span> <span class="dv">0</span>)</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true"></a><span class="co">-- | The type level natural numbers, by definition, do not go below 0.</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true"></a><span class="co">-- (0 - 1) is a valid type, we just don&#39;t have the type (-1) to use on</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true"></a><span class="co">-- the right hand side, so the only way this will work is to say</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true"></a><span class="co">-- ((0 - 1) ~ (0 - 1)), which is pointless.</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true"></a>  • <span class="dt">Couldn&#39;t</span> match <span class="kw">type</span> ‘<span class="dv">0</span> <span class="op">-</span> 1’ with ‘0’ arising from a use <span class="kw">of</span> ‘prop’</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true"></a>  • <span class="dt">In</span> the expression<span class="op">:</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>((<span class="dv">0</span> <span class="op">-</span> <span class="dv">1</span>) <span class="op">~</span> <span class="dv">0</span>)</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true"></a><span class="co">-- | (5 - 2) is indeed less than 10</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>(((<span class="dv">5</span> <span class="op">-</span> <span class="dv">2</span>) <span class="ot">`CmpNat`</span> <span class="dv">10</span>) <span class="op">~</span> <span class="dt">&#39;LT</span>)</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true"></a><span class="co">-- | (5 - 2) is indeed equal to 3</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>(((<span class="dv">5</span> <span class="op">-</span> <span class="dv">2</span>) <span class="ot">`CmpNat`</span> <span class="dv">3</span>) <span class="op">~</span> <span class="dt">&#39;EQ</span>)</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>(<span class="st">&quot;foo&quot;</span> <span class="ot">`AppendSymbol`</span> <span class="st">&quot;bar&quot;</span> <span class="op">~</span> <span class="st">&quot;foobar&quot;</span>)</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true"></a><span class="op">&gt;&gt;</span> prop <span class="op">$</span> <span class="dt">Proxy</span> <span class="op">@</span>(<span class="st">&quot;foo&quot;</span> <span class="ot">`CmpSymbol`</span> <span class="st">&quot;foo&quot;</span> <span class="op">~</span> <span class="dt">&#39;True</span>)</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="st">&quot;Typechecks&quot;</span></span></code></pre></div>
+<p>The module also contains the functions <code>someNat/someNatVal</code> and <code>someSymbol/someSymbolVal</code> to allow us to work with existentials (i.e. <code>Nat</code>s and <code>Symbol</code>s only known at runtime) in exchange for type ambiguity. We will talk about using existentials in kind-level programming towards the end of this article.</p>
+<h2 id="polykinds">Polykinds</h2>
+<p>With so many kinds in Haskell, we want to be able to write code that is as kind-generic as possible. Writing naive code without explicit kind signatures would simply result in unnecessarily constraining type variables to <code>Type</code>, and in many cases, this is not what we want.</p>
+<p>Enter the <code>PolyKinds</code> extension, which allows us to specify <strong>type variables</strong> on the right hand side of kind signatures. Since kinds are just types in Haskell, you have been able to specify types we typically think of as kinds in class instance declarations all along! Without being able to use these “kind variables” on the right hand side of a kind signature, however, this is mostly useless without <code>PolyKinds</code>.</p>
+<p>The following are a few examples of PolyKinds usage:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="co">-- | Conventionally we notate the &#39;kind variable&#39; as @k@</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">class</span> <span class="dt">Example</span> (<span class="ot">a ::</span> k) <span class="kw">where</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a><span class="co">-- | All valid</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">instance</span> <span class="dt">Example</span> <span class="dv">1</span> <span class="kw">where</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">instance</span> <span class="dt">Example</span> <span class="st">&quot;foo&quot;</span> <span class="kw">where</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">instance</span> <span class="dt">Example</span> <span class="dt">Bool</span> <span class="kw">where</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true"></a><span class="co">-- | Whereas if we were to forget to specify a polymorphic kind variable for @a@:</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">class</span> <span class="dt">BadExample</span> a <span class="kw">where</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true"></a><span class="co">-- | Valid</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">instance</span> <span class="dt">BadExample</span> <span class="dt">Bool</span> <span class="kw">where</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true"></a><span class="co">-- | Oh no! (1 :: Nat), but the class instance implicitly expects a @Type@.</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">instance</span> <span class="dt">BadExample</span> <span class="dv">1</span> <span class="kw">where</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true"></a>    • <span class="dt">Expected</span> a <span class="kw">type</span>, but ‘1’ has kind ‘<span class="dt">Nat</span>’</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true"></a>    • <span class="dt">In</span> the first argument <span class="kw">of</span> ‘<span class="dt">BadExample</span>’, namely ‘1’</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true"></a>      <span class="dt">In</span> the <span class="kw">instance</span> declaration for ‘<span class="dt">BadExample</span> 1’</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true"></a></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true"></a><span class="co">-- | Same deal, but for @Symbol@</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">instance</span> <span class="dt">BadExample</span> <span class="st">&quot;foo&quot;</span> <span class="kw">where</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true"></a></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true"></a>    • <span class="dt">Expected</span> a <span class="kw">type</span>, but ‘<span class="st">&quot;foo&quot;</span>’ has kind ‘<span class="dt">Symbol</span>’</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true"></a>    • <span class="dt">In</span> the first argument <span class="kw">of</span> ‘<span class="dt">BadExample</span>’, namely ‘<span class="st">&quot;foo&quot;</span>’</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true"></a>      <span class="dt">In</span> the <span class="kw">instance</span> declaration for ‘<span class="dt">BadExample</span> <span class="st">&quot;foo&quot;</span>’</span></code></pre></div>
+<p>With <code>PolyKinds</code>, any number of type variables can appear on the right hand side of a kind signature as part of type application; in fact, the right side <em>can be any valid type expression</em> potentially involving type synonyms and type families, <strong><em>so long as they reduce to a type with kind <code>Type</code></em></strong>:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="co">-- | Bad! @t@ has implicit kind @Type@; applied to the kind-level function @k@, the</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a><span class="co">-- expression @k t@ evaluates to kind @Type -&gt; Type@, but the right hand side of the</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a><span class="co">-- kind signature for @a@ must have kind @Type@!</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true"></a><span class="co">--</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true"></a><span class="co">-- As we have discussed previously, the &#39;kind&#39; of any kind must be @Type@, hence this</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true"></a><span class="co">-- restriction. However if you notice, `k` when used as a &quot;kind variable&quot; will actually be</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true"></a><span class="co">-- uninhabited, for there are no kinds whose &#39;kind&#39; has an arity higher than 1 like what we</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true"></a><span class="co">-- are specifying here.</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true"></a><span class="op">&gt;&gt;</span><span class="ot"> f ::</span> <span class="kw">forall</span> (<span class="ot">k ::</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Type</span>) t (<span class="ot">a ::</span> k t)<span class="op">.</span> a</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true"></a>    • <span class="dt">Expecting</span> one more argument to ‘k t’</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true"></a>      <span class="dt">Expected</span> a <span class="kw">type</span>, but ‘k t’ has kind ‘<span class="op">*</span> <span class="ot">-&gt;</span> <span class="op">*</span>’</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true"></a>    • <span class="dt">In</span> the kind ‘k t’</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true"></a>      <span class="dt">In</span> an expression <span class="kw">type</span> signature<span class="op">:</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true"></a>        <span class="kw">forall</span> (<span class="ot">k ::</span> <span class="op">*</span> <span class="ot">-&gt;</span> <span class="op">*</span> <span class="ot">-&gt;</span> <span class="op">*</span>) t (<span class="ot">a ::</span> k t)<span class="op">.</span> a</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true"></a>      <span class="dt">In</span> the expression<span class="op">:</span><span class="ot"> f ::</span> <span class="kw">forall</span> (<span class="ot">k ::</span> <span class="op">*</span> <span class="ot">-&gt;</span> <span class="op">*</span> <span class="ot">-&gt;</span> <span class="op">*</span>) t (<span class="ot">a ::</span> k t)<span class="op">.</span> a</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true"></a><span class="co">-- | A correct example.</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true"></a><span class="co">--</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true"></a><span class="co">-- The compiler will assume `k t` evaluates to `Type` so that the kind of `f` remains</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true"></a><span class="co">-- well-formed. It will then try to deduce @k@ and @t@ for us as long as `a` is known </span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true"></a><span class="co">-- based on the context the function is used in, however we can use TypeApplications </span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true"></a><span class="co">-- to manually specify them if we wish to. In this case, @t@ has the implicit kind @Type@, </span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true"></a><span class="co">-- thus @k@ by virtue of the being applied to @t@ has the kind-type @Type -&gt; Type@.</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true"></a><span class="op">&gt;&gt;</span><span class="ot"> f ::</span> <span class="kw">forall</span> k t (<span class="ot">a ::</span> k t)<span class="op">.</span> a</span></code></pre></div>
+<p>Note that polymorphic kind variables in a <code>forall</code> <strong><em>must always come before any type variables referencing them</em></strong>. As such, the function <code>f</code> above would be malformed if the order of type variables was reversed:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="op">&gt;&gt;</span><span class="ot">   f ::</span> <span class="kw">forall</span> (<span class="ot">a ::</span> k t) t k<span class="op">.</span> a</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span> <span class="dt">Not</span> <span class="kw">in</span> scope<span class="op">:</span> <span class="kw">type</span> variable ‘k’</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true"></a><span class="op">&lt;</span>interactive<span class="op">&gt;:</span> <span class="fu">error</span><span class="op">:</span> <span class="dt">Not</span> <span class="kw">in</span> scope<span class="op">:</span> <span class="kw">type</span> variable ‘t’</span></code></pre></div>
+<p>In an earlier section, we noted that the presence of <code>-XPolyKinds</code> is a ‘context’ which can affect kind-defaulting to <code>Type</code>. Indeed, if we were to examine the kind signatures of declarations that do not use explicit kind signatures for type variables before and after enabling <code>-XPolyKinds</code>, we will get some surprising results:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>set <span class="op">-</span><span class="dt">XNoPolyKinds</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">type</span> <span class="dt">S</span> a b <span class="ot">=</span> ()</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>k <span class="dt">S</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true"></a><span class="dt">S</span><span class="ot"> ::</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Type</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>set <span class="op">-</span><span class="dt">XPolyKinds</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="kw">type</span> <span class="dt">S</span> a b <span class="ot">=</span> ()</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>k <span class="dt">S</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true"></a><span class="dt">S</span><span class="ot"> ::</span> k1 <span class="ot">-&gt;</span> k2 <span class="ot">-&gt;</span> <span class="dt">Type</span></span></code></pre></div>
+<p>In short, <code>-XPolyKinds</code> will <em>change kind defaulting rules</em> such that type variables are as kind-agnostic as possible. Such a change can definitely break codebases, so it is best to be mindful of it beforehand.</p>
+<p>Last but not least, it is worth going over a common misunderstanding regarding polymorphic kinds; that polymorphic kind variables are magically “hidden” or “implicit” in cases like the following:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="kw">type</span> <span class="kw">family</span> <span class="dt">Example</span> f (<span class="ot">t ::</span> k) (<span class="ot">g ::</span> k) <span class="kw">where</span></span></code></pre></div>
+<p>Rest assured that there is no wizardry going on here. Recall that the above statement is really just sugar for what is conceptually the following:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="kw">type</span> <span class="kw">family</span> (<span class="kw">forall</span> k f (<span class="ot">t ::</span> k) (<span class="ot">g ::</span> k)<span class="op">.</span> <span class="dt">Example</span> f t g) <span class="kw">where</span></span></code></pre></div>
+<p>In other words, <code>k</code> is definitely quantified just like all the other variables, even if it is not used as an explicit parameter in the type family. In this context, its type is simply deduced from the kinds of <code>t</code> and <code>g</code>. Additionally, it implies the constraint <code>(t ~~ g)</code>; or, that <code>t</code> has the same kind as <code>g</code> (rarely will we come across seeing operator (~~) like this!).</p>
+<h2 id="kinds-of-kinds">Kinds of Kinds</h2>
+<p>A common question that many new Haskellers ask when they learn about kinds is ‘are there kinds of kinds’? The answer to this is tricky. Formally speaking, in the realm of type theory, yes, there are ‘kinds of kinds’ or ‘types of kinds’, however you wish to phrase it, which we would call a level-3 universe. The problem is, Haskell has a loose, finite-universe model, with a level-2 “universe” being the highest supported by the type system.</p>
+<p>Recall that kinds are just types in Haskell. If we try to find the “kind” of a kind what we will get kind of the type declaration for the kind:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>k <span class="dt">Nat</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="dt">Nat</span><span class="ot"> ::</span> <span class="op">*</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>k <span class="op">*</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a><span class="op">*</span><span class="ot"> ::</span> <span class="op">*</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>k <span class="dt">Type</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true"></a><span class="dt">Type</span><span class="ot"> ::</span> <span class="op">*</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true"></a><span class="co">-- See where this is going?</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>k ((<span class="dt">Nat</span> <span class="ot">-&gt;</span> <span class="dt">Symbol</span>) <span class="ot">-&gt;</span> <span class="dt">Constraint</span> <span class="ot">-&gt;</span> <span class="dt">Type</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true"></a>((<span class="dt">Nat</span> <span class="ot">-&gt;</span> <span class="dt">Symbol</span>) <span class="ot">-&gt;</span> <span class="dt">Constraint</span> <span class="ot">-&gt;</span> <span class="dt">Type</span>)<span class="ot"> ::</span> <span class="op">*</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true"></a><span class="op">&gt;&gt;</span> <span class="op">:</span>k ((<span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Symbol</span>) <span class="ot">-&gt;</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Constraint</span>)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true"></a>((<span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Symbol</span>) <span class="ot">-&gt;</span> <span class="dt">Type</span> <span class="ot">-&gt;</span> <span class="dt">Constraint</span>)<span class="ot"> ::</span> <span class="op">*</span></span></code></pre></div>
+<p>In other words, the naive ‘kind of a kind’ in all cases is merely <code>Type</code>, as you would expect. This may seem trivial at first glance but it is important to remember the semantics of how this works, for people tend to commit all sorts of design errors when venturing into any form of intermediate-advanced kind-level programming for the first time.</p>
+<p>Let us now take a step back from values, types, and kinds for a moment and take look at a generalization of all three of these concepts from homotopy type theory: universes. This will not only help build an intuitive mental model of Haskell’s type system, but will offer insight into the future of Haskell in the form of the work-in-progress <code>DependentTypes</code> extension.</p>
+<h1 id="universes">Universes</h1>
+<p>To get a true understand of kinds and what it means for Haskell to only have a ‘loose, finite-universe system’, we need to retreat back to our ivory tower for a bit and gain an intuition for the original, theoretically-rooted generalization of types and kinds: <em>universes</em>. The term can sound a bit intimidating, however the concept itself is fairly trivial:</p>
+<p>There are five things you need to know to reason about universes:</p>
+<ol type="1">
+<li>Every universe <span class="math inline">\(\textbf{U}_n\)</span> is a set of types
+<ul>
+<li>Where <span class="math inline">\(n\)</span> conventionally starts at 0 or 1, ascending</li>
+<li>We will assume universes start at 1 for the purposes of this article</li>
+</ul></li>
+<li>Every universe is itself a type
+<ul>
+<li>The representation of which we will refer to as <span class="math inline">\(T\ (\textbf{U}_n)\)</span></li>
+</ul></li>
+<li>Each universe <span class="math inline">\(\textbf{U}_n\)</span> is the union of all subuniverses <span class="math inline">\(\textbf{U}_{m}\)</span> forall <span class="math inline">\(1 \leq m &lt; n\)</span>, along with a singleton set of its immediate subuniverse as a type <span class="math inline">\(T\ (\textbf{U}_{n-1})\)</span>
+<ul>
+<li>That is to say, <span class="math inline">\(\textbf{U}_n \equiv \left(\displaystyle\bigcup_{m=1}^{n-1} \textbf{U}_m\right)\ \cup\ { T\ (U_{n-1}) }\)</span></li>
+</ul></li>
+<li>Cumulativity
+<ul>
+<li>Each universe <span class="math inline">\(\textbf{U}_n\)</span> is an element <strong>in each universe</strong> <span class="math inline">\(\textbf{U}_m\)</span>, forall <span class="math inline">\(m &gt; n\)</span></li>
+<li>That is to say, a level-1 universe <span class="math inline">\(\textbf{U}_1\)</span> is an element of <span class="math inline">\(\textbf{U}_2\)</span>, <span class="math inline">\(\textbf{U}_3\)</span>, …, <span class="math inline">\(\textbf{U}_\infty\)</span></li>
+<li>A universe <strong>is never</strong> an element of itself</li>
+</ul></li>
+<li>Every universe is an element of the end universe <span class="math inline">\(\textbf{U}_\infty\)</span>
+<ul>
+<li>Meaning, there is no universe higher than <span class="math inline">\(\textbf{U}_\infty\)</span></li>
+</ul></li>
+</ol>
+<p>Informally speaking, we can think of <span class="math inline">\(\textbf{U}_1\)</span> as all types and <span class="math inline">\(\textbf{U}_2\)</span> as all kinds in Haskell.</p>
+<h2 id="cumulative-universes-vs.-universe-polymorphism-and-haskell">Cumulative Universes vs. Universe Polymorphism, and Haskell</h2>
+<p>An attentive reader may have noticed my choice of words regarding universes in Haskell, using language such as “informally speaking”, quoting the term “universe” whenever the context was about Haskell, and even describing the very notion of it as “loose”. Strictly speaking, Haskell <strong>does not have universes in the conventional sense</strong>. Universes in the conventional type theory sense follow the <strong>cumulative</strong> model, in constrast to Haskell’s more limited approach. The main distinction here is that a “universe” in Haskell only contains the types of its <em>immediate</em> children universes. That is to say, types within “<span class="math inline">\(\textbf{U}_1\)</span>” are not considered to be elements of “<span class="math inline">\(\textbf{U}_2\)</span>” due to the extra level of indirection caused by “<span class="math inline">\(\textbf{U}_1\)</span>” (<code>Type :: U1 :: U2</code>).</p>
+<p>Beyond that, Haskell’s “universe” model cannot be represented as a linear hierarchy—another property of cumulative universes. As expounded on above, we have a potentially <em>infinite</em> number of possible kinds thanks to <code>DataKinds</code>—infinite level-1 “universes”. There is no “hacky” way in which we encode all of these kinds in a linear hierarchy, for it would imply a type is of a kind other than its own, or that a kind contains a type other than what it actually should. In practice, however, this simplified model is acceptable since Haskell also supports <strong>universe polymorphism</strong> (in the usual limited sense, of course). In simple terms, universe polymorphism refers to how a type variable can stand for a universe. In strict Haskell terms, we refer to it as <strong>kind polymorphism</strong>. As you may have guessed, this is <em>precisely</em> what <code>PolyKinds</code> allows for.</p>
+<h1 id="sample-applications-of-kind-level-programming">Sample Applications of Kind-level Programming</h1>
+<h2 id="closed-type-families">Closed Type Families</h2>
+<p>Data kinds allow for a more “proper” closed type families, allowing for totality and easier reasoning that comes with closed, user-definable kinds; ever-more-closely approximating the notion of a type-level function:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode hs"><code class="sourceCode haskell"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="ot">{-# LANGUAGE DataKinds #-}</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Example</span> a <span class="kw">where</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a>  <span class="dt">Foo</span><span class="ot"> ::</span> <span class="dt">Example</span> ()</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true"></a>  <span class="dt">Bar</span><span class="ot"> ::</span> <span class="kw">forall</span> a x y<span class="op">.</span> x y <span class="ot">-&gt;</span> x a <span class="ot">-&gt;</span> <span class="dt">Example</span> (x y)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true"></a>  <span class="dt">Baz</span><span class="ot"> ::</span> a <span class="ot">-&gt;</span> <span class="dt">Example</span> a</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true"></a><span class="kw">data</span> <span class="dt">Res</span> <span class="ot">=</span> <span class="dt">A</span> <span class="op">|</span> <span class="dt">B</span> <span class="op">|</span> <span class="dt">C</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true"></a><span class="kw">type</span> <span class="kw">family</span> <span class="dt">Demonstration</span> (<span class="dt">Example</span> a)<span class="ot"> ::</span> <span class="dt">Res</span> <span class="kw">where</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true"></a>  <span class="dt">Demonstration</span> <span class="dt">&#39;Foo</span>       <span class="ot">=</span> <span class="dt">&#39;A</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true"></a>  <span class="dt">Demonstration</span> (<span class="dt">&#39;Bar</span> _ _) <span class="ot">=</span> <span class="dt">&#39;B</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true"></a>  <span class="dt">Demonstration</span> (<span class="dt">&#39;Baz</span> _)   <span class="ot">=</span> <span class="dt">&#39;C</span></span></code></pre></div>
+<h2 id="refinement-types">Refinement Types</h2>
+<p>You may have heard the phrase “propositions as types” or “propositions are just types” before. The concept of refinement types can be seen as a literal interpretation of these statements. A refinement type can be thought of as a wrapper for a type, additionally parameterizing it over a type-level predicate; in other words, a type-level expression that evaluates to the kind <code>Bool</code>. This type-level predicate is canonically used to represent static guarantees about the runtime values of its associated type (pun not intended).</p>
+<p>Refinement types were essential to my own library <code>surtur</code>, which sought to ensure that Vulkan API calls were always sound given a list of static guarantees regarding device (GPU) properties. As it turns out, this also helped ensure that usage of the Vulkan API is standards-compliant, eliminating the age-old problem of determining whether the graphics driver or the program is at fault. The system of guarantees in question was implemented via nested monadic contexts parameterized over a higher-kinded list of refinement types.</p>
+<h2 id="quasi--dependent-typing-via-singletons">Quasi- Dependent Typing via Singletons</h2>
+<p>By a long shot, the infamous <code>singletons</code> library contains some of the heaviest and most obscure uses of kinds one will ever see. The purposes of <code>singletons</code> is to essentially allow promotion of values to types and demotion of types to values. This is a roundabout way of achieving dependent types until <code>-XDependentTypes</code> is a thing many years from now.</p>
+<p>Broadly speaking, dependent types allow for strong types to be used more liberally. In cases where certain type parameters may or may not be know until runtime, a compromise has to be made in their design in order to reduce how strongly-parameterized a type is (detrimental to statically-computable use cases) in order to cater to use cases where said parameters may remain unknown until runtime. Or, one could write their data structures and functions in terms of singletons, and have the best of both words in exchange for verbose and arguably-ugly syntax.</p>
+<p>The key to understanding singletons is to <em>read the documentation</em>, quite literally. Normally, we think of “type synonyms”, “type families”, and “associated types” as, well, <em>types</em>. But recall that kinds are really just label types. Nothing is preventing a synonym or family instance from returning such types. <em>This</em> is the overarching concept found throughout <code>singletons</code>: <em>kind</em> synonyms, <em>kind</em> families, and associated <em>kinds</em>. This is not a deficiency with Haskell’s syntax per se, for recall that a formal universe, too, is but a type. It is merely a change in perspective. Unfortunately, we do not have much more to go by to differentiate between type or kind synonyms/families other than the documentation and any surrounding context. Thankfully, however, <code>singletons</code> is a fairly well-documented library, so this is in practice not as bad as it sounds.</p>
+<p>I strongly urge you, the reader, to check out <a href="https://hackage.haskell.org/package/singletons-2.7/docs/Data-Singletons.html#t:Demote">some sample Hackage documentation for <code>singletons</code></a> if you have not already. It is an <em>excellent</em> way to put your comprehension of kinds to the test. You will have to take my word that the signatures look scarier than they actually are.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Hopefully this article has left you with a solid foundation of understanding for kinds; both how they work and how they are useful. Although this is certainly a long read, I wanted to leave little to no room for doubt by the end of it all. There used to be a long section on universes in detail, however I cut it out as the article is already long enough as it is, and I thought it irrelevant for intuition. Comments and suggestions are welcome; if I left anything worth mentioning out, I will be sure to revise this article and include it.</p>
+<p>I leave the dual meaning of title of this article an exercise to the reader, though the choice was more of a tribute to <a href="https://www.youtube.com/watch?v=pkifmLcW39Y">a certain band</a> more than anything.</p></div></div><div class="entry-meta"><br class="half-line"><hr class="light"><span class="entry-tags"><a href="/tag/haskell
+.html" class="tag"><span>haskell
+</span></a><a href="/tag/type-level
+.html" class="tag"><span>type-level
+</span></a></span></div></div><section id="disqus_thread"></section></body><script async src="//cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js" id="MathJax-script"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="/js/scripts.js"></script><script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>

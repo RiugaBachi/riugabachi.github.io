@@ -221,7 +221,7 @@ body
   background-image      : url("/img/wallpaper.png");
   background-position   : 79.5% 0%;
   background-size       : cover;
-  background-color      : #a3969c;
+  background-color      : #d24d57;
   background-attachment : fixed;
 }
 
@@ -278,6 +278,11 @@ section
 summary
 {
   display : block;
+}
+
+.hidden
+{
+  display : none;
 }
 
 .header
@@ -632,7 +637,7 @@ img
   -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
   box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
   margin-top         : 20px;
-  border             : solid 3px rgba(255,215,0,0.78);
+  border             : solid 3px rgba(255,215,0,0.85);
   height             : 200px;
   width              : 200px;
 }
@@ -719,300 +724,83 @@ pre .highlight
   padding : 1em 1em 1em 1em;
 }
 
-.highlight
+div > .sourceCode
 {
-  background-color : #49483e;
-  color            : #f8f8f2;
-  font-family      : "Inconsolata";
+  -webkit-box-shadow : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -moz-box-shadow    : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -ms-box-shadow     : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -o-box-shadow      : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  box-shadow         : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+}
+
+.sourceCode
+{
+  background-color : #121212;
+  color            : #e8e8e8;
+  font-family      : "JetBrainsMonoMedium Nerd Font Mono";
+  font-size        : 12px;
   border-radius    : 4px 4px 4px 4px;
 }
 
-.highlight pre
+.sourceCode pre
 {
-  position : relative;
-  margin   : none none none none;
-  padding  : 1em 1em 1em 1em;
+  overflow-x : hidden;
+  position   : relative;
+  margin     : none none none none;
+  padding    : 1em 1em 1em 1em;
 }
 
-.highlight .lineno
-{
-  padding-right : 24px;
-  color         : rgba(255,255,255,255.0);
-}
-
-.highlight .hll
+.sourceCode .hll
 {
   background-color : #49483e;
 }
 
-.highlight .c
+.sourceCode .co
 {
   color : #75715e;
 }
 
-.highlight .err
+.sourceCode .err
 {
   color : #950050;
 }
 
-.highlight .ge
+.sourceCode .ge
 {
   font-style : italic;
 }
 
-.highlight .gs
+.sourceCode .gs
 {
   font-weight : bold;
 }
 
-.highlight .o
+.sourceCode .ot
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .kn
+.sourceCode .kw
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .nt
+.sourceCode .op
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .ow
-{
-  color : #f92672;
-}
-
-.highlight .k
-{
-  color : #66d9ef;
-}
-
-.highlight .kc
-{
-  color : #66d9ef;
-}
-
-.highlight .kd
-{
-  color : #66d9ef;
-}
-
-.highlight .kp
-{
-  color : #66d9ef;
-}
-
-.highlight .kr
-{
-  color : #66d9ef;
-}
-
-.highlight .kt
-{
-  color : #66d9ef;
-}
-
-.highlight .no
-{
-  color : #66d9ef;
-}
-
-.highlight .n
-{
-  color : #f8f8f2;
-}
-
-.highlight .p
-{
-  color : #f8f8f2;
-}
-
-.highlight .nb
-{
-  color : #f8f8f2;
-}
-
-.highlight .ni
-{
-  color : #f8f8f2;
-}
-
-.highlight .nl
-{
-  color : #f8f8f2;
-}
-
-.highlight .nn
-{
-  color : #f8f8f2;
-}
-
-.highlight .py
-{
-  color : #f8f8f2;
-}
-
-.highlight .nv
-{
-  color : #f8f8f2;
-}
-
-.highlight .w
-{
-  color : #f8f8f2;
-}
-
-.highlight .bp
-{
-  color : #f8f8f2;
-}
-
-.highlight .vc
-{
-  color : #f8f8f2;
-}
-
-.highlight .vg
-{
-  color : #f8f8f2;
-}
-
-.highlight .vi
-{
-  color : #f8f8f2;
-}
-
-.highlight .ld
+.sourceCode .dt
 {
   color : #e6db74;
 }
 
-.highlight .s
-{
-  color : #e6db74;
-}
-
-.highlight .sb
-{
-  color : #e6db74;
-}
-
-.highlight .sc
-{
-  color : #e6db74;
-}
-
-.highlight .sd
-{
-  color : #e6db74;
-}
-
-.highlight .s2
-{
-  color : #e6db74;
-}
-
-.highlight .sh
-{
-  color : #e6db74;
-}
-
-.highlight .si
-{
-  color : #e6db74;
-}
-
-.highlight .sx
-{
-  color : #e6db74;
-}
-
-.highlight .sr
-{
-  color : #e6db74;
-}
-
-.highlight .s1
-{
-  color : #e6db74;
-}
-
-.highlight .ss
-{
-  color : #e6db74;
-}
-
-.highlight .na
+.sourceCode .st
 {
   color : #a6e22e;
-}
-
-.highlight .nc
-{
-  color : #a6e22e;
-}
-
-.highlight .nd
-{
-  color : #a6e22e;
-}
-
-.highlight .ne
-{
-  color : #a6e22e;
-}
-
-.highlight .nf
-{
-  color : #a6e22e;
-}
-
-.highlight .nx
-{
-  color : #a6e22e;
-}
-
-.highlight .l
-{
-  color : #ae81ff;
-}
-
-.highlight .m
-{
-  color : #ae81ff;
-}
-
-.highlight .mf
-{
-  color : #ae81ff;
-}
-
-.highlight .mh
-{
-  color : #ae81ff;
-}
-
-.highlight .mi
-{
-  color : #ae81ff;
-}
-
-.highlight .mo
-{
-  color : #ae81ff;
-}
-
-.highlight .se
-{
-  color : #ae81ff;
-}
-
-.highlight .il
-{
-  color : #ae81ff;
 }
 
 title
@@ -1067,7 +855,7 @@ figcaption
 pre,
 code
 {
-  font-family : "Inconsolata";
+  font-family : "JetBrainsMonoMedium Nerd Font Mono";
   overflow-x  : auto;
 }
 
@@ -1094,6 +882,12 @@ li .highlight code
 {
   background-color : rgba(0,0,0,0.0);
   border           : solid 0px rgba(0,0,0,0.0);
+}
+
+.math
+{
+  font-size   : 18px;
+  font-family : "serif";
 }
 
 .notice
@@ -1270,7 +1064,7 @@ h3.stylized a
 }
 
 
-/* Generated with Clay, http://fvisser.nl/clay */</style></head><body><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/posts.html" class="btn btn-return"><i class="fas fa-fw fa-chevron-left"></i></a></div><div class="container container-post"><div class="post-header"><h1>The Formula for Functors
+/* Generated with Clay, http://fvisser.nl/clay */</style></head><body class="hidden"><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/posts.html" class="btn btn-return"><i class="fas fa-fw fa-chevron-left"></i></a></div><div class="container container-post"><div class="post-header"><h1>The Formula for Functors
 </h1><h4>02 June 2019
 </h4><p class="reading-time"><i class="far fa-clock"></i> Reading time ~24 minutes</p></div><hr><br class="half-line"><p>Bifunctor. Protofunctor - no, wait - or was it <em>Profunctor</em>? Contra-? Co-? …Variant? It can seem as though the Haskell community resides atop an ivory tower and drops some of the most <em>confusing</em> names for concepts and abstractions, down to the crowd of laymen at the bottom as some sort of indirect gesture of flexing their intelligence. I can assure you, however, that this is not the case, but a mere perception. My recent Google search shows that there <em>still</em> aren’t too many guides out there for laymen regarding anything more advanced than a regular <code>Functor</code>, so I’ve taken it into my own hands to contribute a missing piece to the Haskell community.</p>
 <p>In this article, we will cover the common types of functors encountered in the wild, and how their names are constructed. By the end of this article, I hope that you will have gained a better understanding of the differences between the different types of functors, and be able to make sense of their names.</p>
@@ -1318,7 +1112,7 @@ h3.stylized a
 <p>This is why the analogy of a boxed or wrapped value fails miserably. Forgot about that analogy. Think in terms of machines. The type parameter of regular <code>Functors</code> (i.e. the <code>a</code> in <code>f a</code>) represents the <em>output type</em> of the functor. For <code>Contravariant</code> functors, the type parameter represents the <em>input type</em> of the functor.</p>
 <p>In the signature for <code>contramap</code>, the functor <code>f a</code> represents our <em>original contravariant functor</em>, constructed via some means (that may not necessarily be via contramapping other <code>Contravariants</code>). <code>(b -&gt; a)</code> is a function that <em>transforms b into the input of our original contravariant functor</em>. Given these, <code>contramap</code> <strong><em>produces a new contravariant functor that accepts an input <code>b</code> and internally transforms that <code>b</code> into an <code>a</code> and calls the original functor <code>f a</code> using that <code>a</code></em></strong>. Make sense now? If not, here’s an illustration that may help.</p>
 <figure>
-<img src="https://i.imgur.com/uk5wOWU.png" alt="Contravariant Contramapping Illustration" /><figcaption aria-hidden="true">Contravariant Contramapping Illustration</figcaption>
+<img src="https://i.imgur.com/uk5wOWU.png" alt="Fig 1.1, Contravariant contramapping illustration" /><figcaption aria-hidden="true">Fig 1.1, Contravariant contramapping illustration</figcaption>
 </figure>
 <h1 id="profunctors">Profunctors</h1>
 <p>And so we’ve arrived at the infamous <code>Profunctor</code>. The primary obstacle in understanding a <code>Profunctor</code> is understanding <code>Contravariant</code>, and if my explanation of <code>Contravariant</code> has clicked in your head, this should be easy.</p>
@@ -1350,4 +1144,4 @@ h3.stylized a
 .html" class="tag"><span>haskell
 </span></a><a href="/tag/functors
 .html" class="tag"><span>functors
-</span></a></span></div></div><section id="disqus_thread"></section></body><script src="js/jquery-1.12.0.min.js"></script><script src="js/scripts.js"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>
+</span></a></span></div></div><section id="disqus_thread"></section></body><script async src="//cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js" id="MathJax-script"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="/js/scripts.js"></script><script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>

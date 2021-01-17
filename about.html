@@ -220,7 +220,7 @@ body
   background-image      : url("/img/wallpaper.png");
   background-position   : 79.5% 0%;
   background-size       : cover;
-  background-color      : #a3969c;
+  background-color      : #d24d57;
   background-attachment : fixed;
 }
 
@@ -277,6 +277,11 @@ section
 summary
 {
   display : block;
+}
+
+.hidden
+{
+  display : none;
 }
 
 .header
@@ -631,7 +636,7 @@ img
   -o-box-shadow      : 0px 0px 12px 0px rgba(40,40,40,0.8);
   box-shadow         : 0px 0px 12px 0px rgba(40,40,40,0.8);
   margin-top         : 20px;
-  border             : solid 3px rgba(255,215,0,0.78);
+  border             : solid 3px rgba(255,215,0,0.85);
   height             : 200px;
   width              : 200px;
 }
@@ -718,300 +723,83 @@ pre .highlight
   padding : 1em 1em 1em 1em;
 }
 
-.highlight
+div > .sourceCode
 {
-  background-color : #49483e;
-  color            : #f8f8f2;
-  font-family      : "Inconsolata";
+  -webkit-box-shadow : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -moz-box-shadow    : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -ms-box-shadow     : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  -o-box-shadow      : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+  box-shadow         : 0px 0px 5px 0px rgba(0,0,0,0.6666);
+}
+
+.sourceCode
+{
+  background-color : #121212;
+  color            : #e8e8e8;
+  font-family      : "JetBrainsMonoMedium Nerd Font Mono";
+  font-size        : 12px;
   border-radius    : 4px 4px 4px 4px;
 }
 
-.highlight pre
+.sourceCode pre
 {
-  position : relative;
-  margin   : none none none none;
-  padding  : 1em 1em 1em 1em;
+  overflow-x : hidden;
+  position   : relative;
+  margin     : none none none none;
+  padding    : 1em 1em 1em 1em;
 }
 
-.highlight .lineno
-{
-  padding-right : 24px;
-  color         : rgba(255,255,255,255.0);
-}
-
-.highlight .hll
+.sourceCode .hll
 {
   background-color : #49483e;
 }
 
-.highlight .c
+.sourceCode .co
 {
   color : #75715e;
 }
 
-.highlight .err
+.sourceCode .err
 {
   color : #950050;
 }
 
-.highlight .ge
+.sourceCode .ge
 {
   font-style : italic;
 }
 
-.highlight .gs
+.sourceCode .gs
 {
   font-weight : bold;
 }
 
-.highlight .o
+.sourceCode .ot
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .kn
+.sourceCode .kw
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .nt
+.sourceCode .op
 {
-  color : #f92672;
+  color       : #f92672;
+  font-weight : bold;
 }
 
-.highlight .ow
-{
-  color : #f92672;
-}
-
-.highlight .k
-{
-  color : #66d9ef;
-}
-
-.highlight .kc
-{
-  color : #66d9ef;
-}
-
-.highlight .kd
-{
-  color : #66d9ef;
-}
-
-.highlight .kp
-{
-  color : #66d9ef;
-}
-
-.highlight .kr
-{
-  color : #66d9ef;
-}
-
-.highlight .kt
-{
-  color : #66d9ef;
-}
-
-.highlight .no
-{
-  color : #66d9ef;
-}
-
-.highlight .n
-{
-  color : #f8f8f2;
-}
-
-.highlight .p
-{
-  color : #f8f8f2;
-}
-
-.highlight .nb
-{
-  color : #f8f8f2;
-}
-
-.highlight .ni
-{
-  color : #f8f8f2;
-}
-
-.highlight .nl
-{
-  color : #f8f8f2;
-}
-
-.highlight .nn
-{
-  color : #f8f8f2;
-}
-
-.highlight .py
-{
-  color : #f8f8f2;
-}
-
-.highlight .nv
-{
-  color : #f8f8f2;
-}
-
-.highlight .w
-{
-  color : #f8f8f2;
-}
-
-.highlight .bp
-{
-  color : #f8f8f2;
-}
-
-.highlight .vc
-{
-  color : #f8f8f2;
-}
-
-.highlight .vg
-{
-  color : #f8f8f2;
-}
-
-.highlight .vi
-{
-  color : #f8f8f2;
-}
-
-.highlight .ld
+.sourceCode .dt
 {
   color : #e6db74;
 }
 
-.highlight .s
-{
-  color : #e6db74;
-}
-
-.highlight .sb
-{
-  color : #e6db74;
-}
-
-.highlight .sc
-{
-  color : #e6db74;
-}
-
-.highlight .sd
-{
-  color : #e6db74;
-}
-
-.highlight .s2
-{
-  color : #e6db74;
-}
-
-.highlight .sh
-{
-  color : #e6db74;
-}
-
-.highlight .si
-{
-  color : #e6db74;
-}
-
-.highlight .sx
-{
-  color : #e6db74;
-}
-
-.highlight .sr
-{
-  color : #e6db74;
-}
-
-.highlight .s1
-{
-  color : #e6db74;
-}
-
-.highlight .ss
-{
-  color : #e6db74;
-}
-
-.highlight .na
+.sourceCode .st
 {
   color : #a6e22e;
-}
-
-.highlight .nc
-{
-  color : #a6e22e;
-}
-
-.highlight .nd
-{
-  color : #a6e22e;
-}
-
-.highlight .ne
-{
-  color : #a6e22e;
-}
-
-.highlight .nf
-{
-  color : #a6e22e;
-}
-
-.highlight .nx
-{
-  color : #a6e22e;
-}
-
-.highlight .l
-{
-  color : #ae81ff;
-}
-
-.highlight .m
-{
-  color : #ae81ff;
-}
-
-.highlight .mf
-{
-  color : #ae81ff;
-}
-
-.highlight .mh
-{
-  color : #ae81ff;
-}
-
-.highlight .mi
-{
-  color : #ae81ff;
-}
-
-.highlight .mo
-{
-  color : #ae81ff;
-}
-
-.highlight .se
-{
-  color : #ae81ff;
-}
-
-.highlight .il
-{
-  color : #ae81ff;
 }
 
 title
@@ -1066,7 +854,7 @@ figcaption
 pre,
 code
 {
-  font-family : "Inconsolata";
+  font-family : "JetBrainsMonoMedium Nerd Font Mono";
   overflow-x  : auto;
 }
 
@@ -1093,6 +881,12 @@ li .highlight code
 {
   background-color : rgba(0,0,0,0.0);
   border           : solid 0px rgba(0,0,0,0.0);
+}
+
+.math
+{
+  font-size   : 18px;
+  font-family : "serif";
 }
 
 .notice
@@ -1269,6 +1063,36 @@ h3.stylized a
 }
 
 
-/* Generated with Clay, http://fvisser.nl/clay */</style></head><body><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/" class="btn btn-return"><i class="fas fa-fw fa-home"></i></a></div><div class="container container-post"><div class="post-header"><h1>About Riuga</h1></div><hr><br class="half-line"><center>
-<br/> The great truth is there isn’t one<br/> And it only gets worse since that conclusion<br/> The irony of being an extension to nothing<br/> The force of inertia now a vital factor<br/> <br/> There is despair underneath each and every action<br/> Burning bridges becomes a habit to support<br/> And the front line expands like there’s no tomorrow<br/> <br/> Blessed be the misery, the filth, the discord and the horror<br/> For these ones didn’t need any outside source<br/> <br/> Blessed be the lies, the guilt, the fear, the woe and the betrayal<br/> For these ones come from within<br/> <br/> Stratigraphy of rock bottom<br/> The layers aplenty<br/> As above, so below<br/> But mostly below<br/> <br/> I envy the maggots<br/> Their stuff at least sticks together<br/> Better than laudations of misinformed seers<br/> For those are the lengthy annals of shame we work with<br/> <br/> Blessed be the woodworkers<br/> The crosses<br/> And the gallows<br/> <br/> Blessed be the forgers of iron<br/> And the spikes<br/> And the barbed wire<br/> <br/> Blessed be the stone cutters<br/> It took a quarry<br/> To bury the dreams<br/> <br/> With every dream<br/> The pyres grow taller<br/> Stray philanthrope<br/> In vain endeavor<br/> Walk this path<br/> Now and forever<br/> <br/>
-</center></div></div></div></body><script src="js/jquery-1.12.0.min.js"></script><script src="js/scripts.js"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>
+/* Generated with Clay, http://fvisser.nl/clay */</style></head><body class="hidden"><div class="wrapper"><div class="content"><div class="btn-return-wrapper"><a href="/" class="btn btn-return"><i class="fas fa-fw fa-home"></i></a></div><div class="container container-post"><div class="post-header"><h1>About Riuga</h1></div><hr><br class="half-line"><p>Greetings.</p>
+<p>Name’s Riuga.</p>
+<p>Just a long-time disenfranchised C++ developer -turned Haskell developer, Linux/FOSS proponent, metalhead, and guitarist. Pro- digital privacy, anti-anticheat. My current interests are <em>arrowized FRP</em>, <em>static evaluation</em>, <em>dependent types</em>, <em>isomorphic parsing</em>, and <em>functional Vulkan/SPIR</em>.</p>
+<p>This blog, which I have aptly named my “tavern”—I am, after all, an irredeemable Celtic folk metalhead to some degree—serves as an emporium for all my thoughts related to Haskell, the Korean MMO industry, functional game development, and perhaps in the future, a variety of one-off topics. I believe every experienced Haskeller should try to contribute back to the community in the form of learning resources if they judge themselves to be pedagogically sound; the language is constantly evolving and beginners are having a more difficult time ascending the ivory tower than ever.</p>
+<p>I occasionally livestream Haskell development over on Twitch, albeit with no real schedule for now. It should be noted that my streams do not cater to small monitors; you will likely have to view it in full screen to view the actual code, otherwise it will simply act as a workflow showcase.</p>
+<p>If you need to contact me casually, feel free to reach out to <code>@Riuga#1606</code> over on the <a href="https://discord.gg/w74HPxc">Functional Programming Discord server</a>. Since I run a relatively large Discord server of my own, my personal DMs have been turned off. Please send me a friend request and wait for my approval before direct messaging me. Thank you for your understanding.</p>
+<p>For business inquiries: <code>riuga@tuta.io</code></p>
+<p>I am currently open to considering remote Haskell opportunities agreed upon ahead of time. Feel free to reach out to me via the email address above.</p>
+<p>Homepage quote courtesy of Tuomas Holopainen, off the album <em>Endless Forms Most Beautiful</em>.</p>
+<br/>
+<hr/>
+<p><br/></p>
+<h3 id="q-whats-your-haskell-setup">Q: What’s your Haskell setup?</h3>
+<p>A: Vim with a ghcid wrapper script running per project. This is really only feasible on ultrawide screens where I can afford to dedicate an entire vertical split terminal for ghcid’s output. Helps keep memory usage low, considering Discord and my browser already eats up more than half my RAM on a good day.</p>
+<h3 id="q-what-motivates-you-to-pursue-pure-functional-programming">Q: What motivates you to pursue [pure] functional programming?</h3>
+<p>A: The direction every other language has been tending towards for a <em>very</em> long time now. At some point you realize you want more than what the latest and greatest language features are, such as experimental C++20 Concepts, and that you’ve been trying to shove a square peg (imperative) into a round hole (functional) this whole time. Pursuing functional progrmaming after reaching this point is really the only option left if one wishes to stay sane.</p>
+<h3 id="q-which-haskell-book-do-you-recommend">Q: Which Haskell book do you recommend?</h3>
+<p>A: I believe a book only takes you so far when it comes to Haskell; that is to say, no matter what book one uses, unless they go out of their way to read obscure Haskell blogs and articles, they will be stuck at the ‘beginner’ level. If you are looking for a book, however, my sole recommendation is <code>To Kata Haskellen Evangelion</code> by Cosmia Fu. It is unfinished, many beginners have complained that it was a dry read at times, however I appreciate its emphasis on mathematical rigor and practical exercises. The book covers everything from basic functions all the way to category theory.</p>
+<h3 id="q-whats-with-the-website-theme-where-can-i-get-it">Q: What’s with the website theme? Where can I get it?</h3>
+<p>A: I figured most Haskell blogs look like they were made in the early-mid 2000s, and many of the beginners I have tried evangelizing Haskell to seem to be put off by this. The concepts are already hard enough, so I may as well make it look as modern and motivating as possible to maximize audience attention.</p>
+<p>Believe it or not, this entire blog is written <em>entirely in Haskell</em> using the <a href="https://github.com/srid/rib">Rib static site generator</a>. Plus some minimal Jarascript and Markdown where appropriate. I’ve appropriately named this theme <code>festive</code>, and you can <a href="https://github.com/riugabachi/festive">find it over on my Github</a>. It is very clean, minimal, and maintainable compared to equivalent Jekyll solutions.</p>
+<h3 id="q-favorite-cuisine">Q: Favorite cuisine?</h3>
+<p>A: North Indian.</p>
+<h3 id="q-favorite-band">Q: Favorite band?</h3>
+<p>A: I could give you an answer, but then I’d have to edit it every two weeks or so.</p>
+<h3 id="q-favorite-contemporary-movie">Q: Favorite contemporary movie?</h3>
+<p>A: <a href="https://en.wikipedia.org/wiki/Land_of_Mine">Under sandet (2015)</a>, very much a hidden gem.</p>
+<br/> <br/>
+<hr/>
+<center>
+<br/> The great truth is there isn’t one<br/> And it only gets worse since that conclusion<br/> <br/> The saturnine spheres of fluttering wings<br/> Burning moths we’ve once set free<br/> Across killing fields, once golden<br/> <br/> Rising red rosarium<br/> Blossoming choirs<br/> Beatitudes of endless dead<br/> Where white doves fall<br/> <br/> Blessed be the woodworkers<br/> The crosses<br/> And the gallows<br/> <br/> Blessed be the forgers of iron<br/> The spikes<br/> And the barbed wire<br/> <br/> Blessed be the stone cutters<br/> It took a quarry<br/> To bury the dreams<br/> <br/> Keelhauled and crippled<br/> Tangled in misery<br/> An abyss of dying dreams<br/> For only the pain is real<br/> <br/> How they lived they will be remembered<br/> For the noble souls that were and will be<br/> Ne obliviscaris..forget not..forget not..never<br/> <br/> With every dream<br/> The pyres grow taller<br/> Stray philanthrope<br/> In vain endeavor<br/> Walk this path<br/> Now and forever<br/> <br/> ···<br/> <br/> <em>A lyrical compilation of Ne Obliviscaris, Mgla</em>
+</center>
+<hr/></div></div></div></body><script async src="//cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js" id="MathJax-script"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="/js/scripts.js"></script><script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="//riugabachi.disqus.com/embed.js"></script></html>
